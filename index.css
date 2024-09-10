@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'questrial';
+  font-style: normal;
+  font-weight: 100;
+  src: url(Questrial-Regular.ttf);
+}
+
+html {
+  font-family: 'questrial', Helvetica, sans-serif;
+}
