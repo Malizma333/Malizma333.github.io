@@ -12,8 +12,16 @@
   --gray-primary: #6f7174;
 
   --font-header: 36px;
-  --font-p: 22px;
+  --font-p: 18px;
   --font-sub: 14px;
+}
+
+@media (hover: none) and (pointer: coarse) {
+  :root {
+    --font-header: 22px;
+    --font-p: 14px;
+    --font-sub: 11px;
+  }
 }
 
 html {
@@ -41,17 +49,14 @@ main {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
   width: 75vw;
   text-align: center;
 }
 
-@media (pointer:coarse), (hover:none), (hover:on-demand) {
-  :root {
-    --font-header: 22px;
-    --font-p: 14px;
-    --font-sub: 11px;
-  }
+@media (hover: none) and (pointer: coarse) {
   main {
     width: 100vw;
   }
@@ -66,9 +71,15 @@ p {
   font-size: var(--font-p);
 }
 
-sub {
+#subtext {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+#subtext sub {
   font-size: var(--font-sub);
-  padding-top: 0.5em;
 }
 
 a {
@@ -82,7 +93,7 @@ a {
   display: flex;
   flex-direction: row;
   font-size: var(--font-p);
-  height: 10vh;
+  flex: 2;
   justify-content: center;
   list-style-type: none;
   width: auto;
@@ -105,8 +116,16 @@ a {
   padding: 0.25em;
 }
 
-#navbar a:hover {
-  background-color: var(--blue-primary);
+@media (hover: hover) and (pointer: fine) {
+  #navbar a:hover {
+    background-color: var(--blue-primary);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #navbar a:hover:focus:active {
+    background-color: var(--blue-primary);
+  }
 }
 
 #content {
@@ -115,7 +134,7 @@ a {
   overflow-x: hidden;
   padding-left: 2em;
   padding-right: 2em;
-  height: 80vh;
+  flex: 20;
   scroll-behavior: smooth;
 }
 
@@ -163,9 +182,18 @@ a {
   position: absolute;
 }
 
-#projects-container span a:hover {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: var(--light-secondary);
+@media (hover: hover) and (pointer: fine) {
+  #projects-container span a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--light-secondary);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #projects-container span a:hover:focus:active {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--light-secondary);
+  }
 }
 
 #contact {
@@ -207,6 +235,14 @@ a {
   padding: 0.25em;
 }
 
-#contact a:hover {
-  background-color: var(--black-secondary);
+@media (hover: hover) and (pointer: fine) {
+  #contact a:hover {
+    background-color: var(--black-secondary);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  #contact a:hover:focus:active {
+    background-color: var(--black-secondary);
+  }
 }
