@@ -87,22 +87,11 @@ a {
 }
 
 #navbar {
-  flex: 2;
-  border-bottom: 2px solid var(--cyan-secondary);
-}
-
-#navbar ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
-  font-size: var(--font-p);
-  list-style-type: none;
-}
-
-#navbar li {
-  padding-left: 1em;
-  padding-right: 1em;
+  flex: 2;
+  border-bottom: 2px solid var(--cyan-secondary);
 }
 
 #navbar a {
@@ -110,6 +99,8 @@ a {
   background-color: var(--black-primary);
   border-radius: 0.25em;
   padding: 0.25em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
 @media (hover) {
