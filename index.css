@@ -1,10 +1,50 @@
-@font-face {
-  font-family: 'questrial';
-  font-style: normal;
-  font-weight: 100;
-  src: url(Questrial-Regular.ttf);
+:root {
+  --black-primary:#0c0c0c;
+  --black-secondary: #212121;
+  --blue-primary: #002756;
+  --blue-secondary: #00447c;
+  --cyan-primary: #035b7a;
+  --cyan-secondary: #0b7b9e;
+  --light-primary: #c6c3b6;
+  --light-secondary: #dddace;
+  --white-primary: #eaeaea;
+  --white-secondary: #f2f3f4;
 }
 
 html {
-  font-family: 'questrial', Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+}
+
+body {
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-secondary);
+  color: var(--light-secondary);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: var(--black-primary);
+  text-align: center;
+  letter-spacing: 2px;
+  height: 100vh;
+  overflow: auto;
+  width: 75vw;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+sub {
+  font-size: 12px;
+}
+
+a {
+  color: var(--cyan-secondary);
 }
