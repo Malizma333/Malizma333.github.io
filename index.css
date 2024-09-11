@@ -1,8 +1,8 @@
 :root {
   --black-primary:#121212;
   --black-secondary: #212121;
-  --blue-primary: #002756;
-  --blue-secondary: #00447c;
+  --blue-primary: #003656;
+  --blue-secondary: #00557c;
   --cyan-primary: #035b7a;
   --cyan-secondary: #0b7b9e;
   --light-primary: #c6c3b6;
@@ -14,7 +14,7 @@
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 body {
@@ -39,6 +39,20 @@ main {
   height: 100vh;
 }
 
+h1 {
+  font-size: 2em;
+  margin-bottom: 0;
+}
+
+sub {
+  font-size: 0.75em;
+}
+
+a {
+  color: var(--cyan-secondary);
+  text-decoration: none;
+}
+
 #navbar {
   align-items: center;
   display: flex;
@@ -53,6 +67,22 @@ main {
   padding-right: 1em;
 }
 
+#navbar a {
+  color: var(--cyan-secondary);
+  background-color: var(--black-primary);
+  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  border-radius: 0.25em;
+  padding: 0.25em;
+}
+
+#navbar a:hover {
+  background-color: var(--blue-primary);
+}
+
 #content {
   scrollbar-color: gray var(--black-primary);
   overflow: scroll;
@@ -62,37 +92,48 @@ main {
   height: 80vh;
 }
 
-h1 {
-  font-size: 72px;
-}
-
-sub {
-  font-size: 12px;
-}
-
-a {
-  color: var(--cyan-secondary);
-  text-decoration: none;
-}
-
 #projects-container {
   height: 1000px;
   background-color: gray;
 }
 
-#media-links {
-  font-size: 18px;
+#contact {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact ul {
   list-style-type: none;
+  text-align: left;
 }
 
-#media-links li {
-  margin-top: 1em;
+#contact li {
+  margin-bottom: 1em;
+  user-select: text;
 }
 
-#media-links i {
+#contact i {
   color: var(--light-primary);
+  margin-right: 1em;
 }
 
-#media-links a {
+#contact span {
+  padding: 0.25em;
+}
+
+#contact a {
   color: var(--light-primary);
+  background-color: var(--black-primary);
+  transition: background-color 0.2s ease;
+  -webkit-transition: background-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease;
+  -o-transition: background-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease;
+  border-radius: 0.25em;
+  padding: 0.25em;
+}
+
+#contact a:hover {
+  background-color: var(--black-secondary);
 }
