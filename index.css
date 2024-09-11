@@ -45,6 +45,8 @@ main {
   max-height: 100vh;
   overflow: hidden;
   text-align: center;
+  position: fixed;
+  top: 0px;
 }
 
 @media (min-aspect-ratio: 11/16) {
@@ -85,15 +87,17 @@ a {
 }
 
 #navbar {
-  align-items: center;
+  flex: 2;
   border-bottom: 2px solid var(--cyan-secondary);
+}
+
+#navbar ul {
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
   font-size: var(--font-p);
-  flex: 2;
-  justify-content: center;
   list-style-type: none;
-  width: auto;
 }
 
 #navbar li {
@@ -104,16 +108,19 @@ a {
 #navbar a {
   color: var(--cyan-secondary);
   background-color: var(--black-primary);
-  transition: background-color 0.2s ease;
-  -webkit-transition: background-color 0.2s ease;
-  -moz-transition: background-color 0.2s ease;
-  -o-transition: background-color 0.2s ease;
-  -ms-transition: background-color 0.2s ease;
   border-radius: 0.25em;
   padding: 0.25em;
 }
 
 @media (hover) {
+  #navbar a {
+    transition: background-color 0.2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    -ms-transition: background-color 0.2s ease;
+  }
+
   #navbar a:hover {
     background-color: var(--blue-primary);
   }
@@ -158,23 +165,26 @@ a {
 }
 
 #projects-container span a {
+  display: flex;
   align-items: center;
+  justify-content: center;
   background-color: rgba(0, 0, 0, 0);
   color: rgba(0, 0, 0, 0);
-  display: flex;
   font-size: var(--font-header);
   height: 100%;
   width: 100%;
-  justify-content: center;
   position: absolute;
-  transition: color 0.4s, background-color 0.4s;
-  -webkit-transition: color 0.4s, background-color 0.4s;
-  -moz-transition: color 0.4s, background-color 0.4s;
-  -o-transition: color 0.4s, background-color 0.4s;
-  -ms-transition: color 0.4s, background-color 0.4s;
 }
 
 @media (hover) {
+  #projects-container span a {
+    transition: color 0.4s, background-color 0.4s;
+    -webkit-transition: color 0.4s, background-color 0.4s;
+    -moz-transition: color 0.4s, background-color 0.4s;
+    -o-transition: color 0.4s, background-color 0.4s;
+    -ms-transition: color 0.4s, background-color 0.4s;
+  }
+
   #projects-container span a:hover {
     background-color: rgba(0, 0, 0, 0.5);
     color: var(--light-secondary);
@@ -211,16 +221,19 @@ a {
 #contact a {
   color: var(--light-primary);
   background-color: var(--black-primary);
-  transition: background-color 0.2s ease;
-  -webkit-transition: background-color 0.2s ease;
-  -moz-transition: background-color 0.2s ease;
-  -o-transition: background-color 0.2s ease;
-  -ms-transition: background-color 0.2s ease;
   border-radius: 0.25em;
   padding: 0.25em;
 }
 
 @media (hover) {
+  #contact a {
+    transition: background-color 0.2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    -ms-transition: background-color 0.2s ease;
+  }
+
   #contact a:hover {
     background-color: var(--black-secondary);
   }
