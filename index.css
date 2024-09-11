@@ -96,6 +96,11 @@ a {
   padding-left: 2em;
   padding-right: 2em;
   height: 80vh;
+  scroll-behavior: smooth;
+}
+
+#about {
+  border: 1px solid var(--black-primary);
 }
 
 #projects-container {
