@@ -12,21 +12,61 @@
     <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStnXGh2HOGqNi4lkilEAcOJVOruDBF2O-YwQ&s" />
     <link rel="apple-touch-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStnXGh2HOGqNi4lkilEAcOJVOruDBF2O-YwQ&s" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://unpkg.com/htmx.org@2.0.2" integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ" crossorigin="anonymous"></script>
   </head>
   <body>
+    
     <main>
-      <h1>Hi.</h1>
-      <p>
-        I'm Tobias Bessler, a computer science student at Missouri University of Science and Technology.
-        <br><br>
-        Below are some of the projects I've worked on.
-      </p>
+      <ul id="navbar">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
 
-      <div class="projects-container">
-        
+      <div id="content">
+        <div id="about">
+          <h1>About</h1>
+          <p>
+            Hi. I'm Tobias Bessler, a computer science student at Missouri University of Science and Technology.
+            <br><br>
+            I'm interested in web development, game development, game design, UI/UX, and music visualizers.
+          </p>
+        </div>
+
+        <div id="projects">
+          <h1>Projects</h1>
+          <p>Here are some past projects I've worked on.</p>
+          <div id="projects-container"></div>
+        </div>
+
+        <div id="contact">
+          <h1>Contact Me</h1>
+          <ul id="media-links">
+            <li>
+              <i class="fa fa-filled fa-envelope"></i>
+              tkbessler@gmail.com
+            </li>
+            <a href="https://github.com/Malizma333" target="_blank" rel="noopener noreferrer">
+              <li>
+                <i class="fa fa-brands fa-github"></i>
+                github.com/Malizma333
+              </li>
+            </a>
+            <li>
+              <i class="fa fa-brands fa-discord"></i>
+              malizma
+            </li>
+            <a href="https://www.youtube.com/@Malizma333" target="_blank" rel="noopener noreferrer">
+              <li>
+                <i class="fa fa-brands fa-youtube"></i>
+                youtube.com/@Malizma333
+              </li>
+            </a>
+          </ul>
+        </div>
+
       </div>
-
       <sub>
         This site was created using <a href="https://htmx.org/" target="_blank" rel="noopener noreferrer">HTMX</a> and CSS.
         Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub pages</a>.
