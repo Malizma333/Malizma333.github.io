@@ -35,8 +35,14 @@ main {
   text-align: center;
   letter-spacing: 2px;
   overflow: hidden;
-  width: calc(max(75vw, 750px));
+  width: 75vw;
   height: 100vh;
+}
+
+@media (max-aspect-ratio: 9/16) {
+  main {
+    width: 100vw;
+  }
 }
 
 h1 {
