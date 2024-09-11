@@ -104,8 +104,48 @@ a {
 }
 
 #projects-container {
-  height: 1000px;
   background-color: gray;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+#projects-container .column {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+#projects-container span {
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+#projects-container span img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#projects-container span a {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0);
+  color: rgba(0, 0, 0, 0);
+  display: flex;
+  transition: color 0.4s, background-color 0.4s;
+  -webkit-transition: color 0.4s, background-color 0.4s;
+  -moz-transition: color 0.4s, background-color 0.4s;
+  -o-transition: color 0.4s, background-color 0.4s;
+  -ms-transition: color 0.4s, background-color 0.4s;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+}
+
+#projects-container span a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--light-secondary);
 }
 
 #contact {

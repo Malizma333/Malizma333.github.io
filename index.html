@@ -10,11 +10,11 @@
     <meta name="description" content="This site hosts my Tobias Bessler's various development projects." />
     <meta property="og:description" content="This site hosts my Tobias Bessler's various development projects." />
     <meta property="og:image" content="assets/icon.svg" />
+    <base target="_blank" />
     <link rel="icon" href="assets/icon.svg" />
     <link rel="apple-touch-icon" href="assets/icon.svg" />
     <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <script src="https://unpkg.com/htmx.org@2.0.2" integrity="sha384-Y7hw+L/jvKeWIRRkqWYfPcvVxHzVzn5REgzbawhxAuQGwX1XWe70vji+VSeHOThJ" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
   </head>
   <body>
     
@@ -31,14 +31,31 @@
           <p>
             Hi. I'm Tobias Bessler, a computer science student at Missouri University of Science and Technology.
             <br><br>
-            I'm interested in web development, game development, game design, UI/UX, and music visualizers.
+            My interests are web development, game development, game design, UI/UX, and music visualizers.
           </p>
         </div>
 
         <div id="projects">
           <h1>Projects</h1>
           <p>Here are some past projects I've worked on.</p>
-          <div id="projects-container"></div>
+          <div id="projects-container">
+            <div class="column">
+              <span>
+                <a href="https://www.linerider.com/">
+                  Line Rider Web
+                </a>
+                <img alt="Line rider web track preview" src="https://www.linerider.com/_v1977.0/social.png"/>
+              </span>
+            </div>
+            <div class="column">
+              <span>
+                <a href="https://github.com/LunaKampling/LROverhaul">
+                  Line Rider Desktop
+                </a>
+                <img alt="Line rider advanced track preview" src="https://linerideradvanced.com/wp-content/uploads/2018/09/peacefulnights.png"/>
+              </span>
+            </div>
+          </div>
         </div>
 
         <div id="contact">
@@ -51,7 +68,7 @@
               </span>
             </li>
             <li>
-              <a href="https://github.com/Malizma333" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/Malizma333">
                 <i class="fa fa-brands fa-github">
                 </i>github.com/Malizma333
               </a>
@@ -63,7 +80,7 @@
               </span>
             </li>
             <li>
-              <a href="https://www.youtube.com/@Malizma333" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@Malizma333">
                 <i class="fa fa-brands fa-youtube">
                 </i>youtube.com/@Malizma333
               </a>
@@ -73,8 +90,8 @@
 
       </div>
       <sub>
-        This site was created using <a href="https://htmx.org/" target="_blank" rel="noopener noreferrer">HTMX</a> and CSS.
-        Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub pages</a>.
+        This site was created using just HTML and CSS.
+        Hosted by <a href="https://pages.github.com/">GitHub pages</a>.
       </sub>
     </main>
   </body>
