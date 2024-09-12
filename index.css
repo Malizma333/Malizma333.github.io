@@ -63,7 +63,6 @@ main {
 
 h1 {
   font-size: var(--font-header);
-  margin-bottom: 0;
 }
 
 p {
