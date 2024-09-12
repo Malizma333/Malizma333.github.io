@@ -91,7 +91,15 @@ a {
   align-items: center;
   justify-content: center;
   flex: 2;
+  padding: 0.25em;
+}
+
+#navbar div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-bottom: 2px solid var(--cyan-secondary);
+  padding: 0.25em;
 }
 
 #navbar a {
@@ -101,6 +109,7 @@ a {
   padding: 0.25em;
   margin-left: 1em;
   margin-right: 1em;
+  font-size: var(--font-p);
 }
 
 @media (hover) {
