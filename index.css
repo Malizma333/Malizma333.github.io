@@ -7,28 +7,28 @@
   --text: #c6c3b6;
   --white: #dddace;
 
-  --font-header: min(28px, 3vw);
-  --font-p: min(18px, 2.5vw);
-  --font-sub: min(11px, 2vw);
+  --font-h: max(2vw, 10px);
+  --font-p: max(1.25vw, 8px);
+  --font-s: max(0.75vw, 6px);
 }
 
 html {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
+  color: var(--text);
   letter-spacing: 2px;
+  user-select: none;
 }
 
 body {
   align-items: center;
   justify-content: center;
   background-color: var(--dark);
-  color: var(--text);
   display: flex;
   flex-direction: column;
   overflow: hidden;
   margin: 0;
   padding: 0;
-  user-select: none;
 }
 
 main {
@@ -42,7 +42,7 @@ main {
   overflow: hidden;
   text-align: center;
   position: fixed;
-  top: 0px;
+  top: 0;
 }
 
 @media (min-aspect-ratio: 11/16) {
@@ -57,20 +57,24 @@ main {
   }
 }
 
-h1 {
-  font-size: var(--font-header);
-}
-
-p {
-  font-size: var(--font-p);
-}
-
 a {
   color: var(--cyan);
   text-decoration: none;
 }
 
-#navbar {
+.h-text {
+  font-size: var(--font-h);
+}
+
+.p-text {
+  font-size: var(--font-p);
+}
+
+.s-text {
+  font-size: var(--font-s);
+}
+
+.navbar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,7 +82,7 @@ a {
   padding: 0.25em;
 }
 
-#navbar div {
+.navbar div {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,43 +90,40 @@ a {
   padding: 0.25em;
 }
 
-#navbar a.section-button {
-  color: var(--cyan);
+.navbar a.section-button {
   background-color: var(--black);
   border-radius: 0.25em;
   padding: 0.25em;
-  margin: 0em 1em;
-  font-size: var(--font-p);
+  margin: 0 1em;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  #navbar a.section-button {
+  .navbar a.section-button {
     transition: background-color 0.2s ease;
     -webkit-transition: background-color 0.2s ease;
     -moz-transition: background-color 0.2s ease;
     -o-transition: background-color 0.2s ease;
-    -ms-transition: background-color 0.2s ease;
   }
 
-  #navbar a.section-button:hover {
+  .navbar a.section-button:hover {
     background-color: var(--blue);
   }
 }
 
-#content {
+.content {
   scrollbar-color: var(--gray) var(--black);
   overflow: scroll;
   overflow-x: hidden;
-  padding: 0em 2em;
+  padding: 0 2em;
   flex: 20;
   scroll-behavior: smooth;
 }
 
-#about {
+.about {
   border: 1px solid var(--black);
 }
 
-#projects {
+.projects {
   background: none;
   border: none;
   width: 100%;
@@ -132,68 +133,9 @@ a {
 }
 
 @media (max-aspect-ratio: 1/1) {
-  #projects {
+  .projects {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-#contact {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  text-wrap: nowrap;
-  font-size: var(--font-p);
-  padding: 2em 0em;
-}
-
-#contact ul {
-  list-style-type: none;
-  text-align: left;
-}
-
-#contact li {
-  margin-bottom: 1em;
-}
-
-#contact i {
-  color: var(--text);
-}
-
-#contact i.fa-copy,#contact i.fa-check {
-  font-size: var(--font-sub);
-}
-
-#contact a {
-  color: var(--text);
-  background-color: var(--black);
-  border-radius: 0.25em;
-  padding: 0.25em;
-  cursor: pointer;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  #contact a {
-    transition: background-color 0.2s ease;
-    -webkit-transition: background-color 0.2s ease;
-    -moz-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
-    -ms-transition: background-color 0.2s ease;
-  }
-
-  #contact a:hover {
-    background-color: var(--dark);
-  }
-}
-
-#subtext {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  flex: 1;
-}
-
-#subtext sub {
-  font-size: var(--font-sub);
 }
 
 .project-container {
@@ -217,7 +159,6 @@ a {
   justify-content: center;
   background-color: #00000000;
   color: #00000000;
-  font-size: var(--font-header);
   height: 100%;
   width: 100%;
   cursor: pointer;
@@ -231,7 +172,6 @@ a {
     -webkit-transition: color 0.4s, background-color 0.4s;
     -moz-transition: color 0.4s, background-color 0.4s;
     -o-transition: color 0.4s, background-color 0.4s;
-    -ms-transition: color 0.4s, background-color 0.4s;
   }
 
   .project-container a.project-thumb:hover {
@@ -258,27 +198,78 @@ a {
   -webkit-transition: margin 0.2s;
   -moz-transition: margin 0.2s;
   -o-transition: margin 0.2s;
-  -ms-transition: margin 0.2s;
-}
-
-.project-content a {
-  color: var(--cyan);
-  text-decoration: none;
-}
-
-.project-content span {
-  color: var(--text);
-  font-size: var(--font-header);
 }
 
 .project-content button.project-content-close {
   background: none;
   border: none;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   margin: 1vw;
   cursor: pointer;
-  font-size: var(--font-header);
   color: var(--gray);
+}
+
+.contacts {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-wrap: nowrap;
+  padding: 2em 0;
+}
+
+.contacts ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+.contacts li {
+  margin-bottom: 1em;
+}
+
+.contacts a {
+  background-color: var(--black);
+  border-radius: 0.25em;
+  padding: 0.25em;
+}
+
+.contacts button {
+  background-color: var(--black);
+  color: var(--text);
+  border: none;
+  border-radius: 0.25em;
+  padding: 0.25em;
+  cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .contacts a {
+    transition: background-color 0.2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+  }
+
+  .contacts a:hover {
+    background-color: var(--dark);
+  }
+
+  .contacts button {
+    transition: background-color 0.2s ease;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+  }
+
+  .contacts button:hover {
+    background-color: var(--dark);
+  }
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex: 1;
 }

@@ -21,17 +21,17 @@
   <body>
     
     <main>
-      <div id="navbar">
+      <div id="navbar" class="navbar">
         <div>
-          <a class="section-button" href="#about" target="_self">About</a>
-          <a class="section-button" href="#projects" target="_self">Projects</a>
-          <a class="section-button" href="#contact" target="_self">Contact</a>
+          <a class="section-button link p-text" href="#about" target="_self">About</a>
+          <a class="section-button link p-text" href="#projects" target="_self">Projects</a>
+          <a class="section-button link p-text" href="#contact" target="_self">Contact</a>
         </div>
       </div>
 
-      <div id="content">
-        <div id="about">
-          <p>
+      <div id="content" class="content">
+        <div id="about" class="about">
+          <p class="p-text">
             Hi. I'm Tobias Bessler, a computer science student at Missouri University of Science and Technology.
             <br><br>
             My interests are web development, game development, game design, UI/UX, and music visualizers.
@@ -40,29 +40,29 @@
           </p>
         </div>
 
-        <div id="projects"></div>
+        <div id="projects" class="projects"></div>
 
-        <div id="contact">
-          <ul>
+        <div id="contact" class="contacts">
+          <ul class="p-text">
             <li>
-              <a id="contacts-email" title="Copy">
+              <button class="p-text" id="contacts-email" title="Copy">
                 <i class="fa fa-filled fa-envelope">
                 </i>
                 tkbessler@gmail.com
                 <i class="fa fa-copy"></i>
-              </a>
+              </button>
+            </li>
+            <li>
+              <button class="p-text" id="contacts-discord" title="Copy">
+                <i class="fa fa-brands fa-discord"></i>
+                malizma
+                <i class="fa fa-copy"></i>
+              </button>
             </li>
             <li>
               <a href="https://github.com/Malizma333">
                 <i class="fa fa-brands fa-github"></i>
                 github.com/Malizma333
-              </a>
-            </li>
-            <li>
-              <a id="contacts-discord" title="Copy">
-                <i class="fa fa-brands fa-discord"></i>
-                malizma
-                <i class="fa fa-copy"></i>
               </a>
             </li>
             <li>
@@ -75,11 +75,9 @@
         </div>
       </div>
 
-      <div id="subtext">
-        <sub>
-          Created with <a href="http://vanilla-js.com/">VanillaJS</a>. Hosted with <a href="https://pages.github.com/">GitHub Pages</a>.
-          v0.2.0
-        </sub>
+      <div class="footer s-text">
+        Created with <a href="http://vanilla-js.com/">VanillaJS</a>. Hosted with <a href="https://pages.github.com/">GitHub Pages</a>.
+        v0.2.0
       </div>
     </main>
   </body>

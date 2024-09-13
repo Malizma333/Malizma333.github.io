@@ -44,18 +44,18 @@ const module = (function() {
     return `
     <div class="project-container">
       <img alt="${thumbAlt}" src="${thumbSrc}"/>
-      <a class="project-thumb">${thumbText}</a>
+      <a class="h-text project-thumb">${thumbText}</a>
       <div class="project-content">
-        <button class="project-content-close">
+        <button class="p-text project-content-close">
           <i class="fa fa-solid fa-xmark"></i>
         </button>
         <a href="${titleLink}">
-          <h1>${titleText}
+          <p class="h-text">${titleText}
             <i class="fa fa-solid fa-up-right-from-square"></i>
-          </h1>
+          </p>
         </a>
-        <span>${icons}</span>
-        <p>${description}</p>
+        <span class="p-text">${icons}</span>
+        <p class="p-text">${description}</p>
       </div>
     </div>`;
   }
