@@ -184,6 +184,7 @@ a {
   flex-direction: column;
   text-wrap: nowrap;
   font-size: var(--font-p);
+  padding: 2em 0em;
 }
 
 #contact ul {
@@ -193,7 +194,6 @@ a {
 
 #contact li {
   margin-bottom: 1em;
-  user-select: text;
 }
 
 #contact i {
@@ -201,15 +201,12 @@ a {
   margin-right: 1em;
 }
 
-#contact span {
-  padding: 0.25em;
-}
-
 #contact a {
   color: var(--light-primary);
   background-color: var(--black-primary);
   border-radius: 0.25em;
   padding: 0.25em;
+  cursor: pointer;
 }
 
 @media (hover) {
