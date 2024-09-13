@@ -95,7 +95,7 @@ a {
   font-size: var(--font-p);
 }
 
-@media (hover) {
+@media (hover: hover) and (pointer: fine) {
   #navbar a.section-button {
     transition: background-color 0.2s ease;
     -webkit-transition: background-color 0.2s ease;
@@ -171,7 +171,7 @@ a {
   cursor: pointer;
 }
 
-@media (hover) {
+@media (hover: hover) and (pointer: fine) {
   #contact a {
     transition: background-color 0.2s ease;
     -webkit-transition: background-color 0.2s ease;
@@ -225,7 +225,7 @@ a {
   grid-row: 1;
 }
 
-@media (hover) {
+@media (hover: hover) and (pointer: fine) {
   .project-container a.project-thumb {
     transition: color 0.4s, background-color 0.4s;
     -webkit-transition: color 0.4s, background-color 0.4s;
