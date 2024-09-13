@@ -99,15 +99,11 @@ const module = (function() {
     const discordContactLink = document.getElementById("contacts-discord");
     
     emailContactLink.addEventListener(
-      "click",
-      async (e) => copyContact(e, emailContactLink, "tkbessler@gmail.com"),
-      false
+      "click", async (e) => copyContact(e, emailContactLink, "tkbessler@gmail.com"), false
     );
 
     discordContactLink.addEventListener(
-      "click",
-      async (e) => copyContact(e, discordContactLink, "malizma"),
-      false
+      "click", async (e) => copyContact(e, discordContactLink, "malizma"), false
     );
 
     const projectDiv = document.getElementById("projects");
