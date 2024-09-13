@@ -11,7 +11,7 @@
   --white-secondary: #f2f3f4;
   --gray-primary: #6f7174;
 
-  --font-header: min(32px, 3vw);
+  --font-header: min(28px, 3vw);
   --font-p: min(18px, 2.5vw);
   --font-sub: min(11px, 2vw);
 }
