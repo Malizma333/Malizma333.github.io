@@ -74,6 +74,59 @@ a {
   font-size: var(--font-s);
 }
 
+.switch-container {
+  position: absolute;
+  top: 2em;
+  right: 3em;
+}
+
+.switch {
+  display: flex;
+  height: var(--font-h);
+  aspect-ratio: 7/4;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch .slider {
+  border-radius: var(--font-h);
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: var(--text);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch .slider i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: var(--font-h);
+  color: var(--black);
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: var(--black);
+}
+
+.switch input:checked + .slider i {
+  -webkit-transform: translateX(calc(var(--font-h)*3/4));
+  -moz-transform: translateX(calc(var(--font-h)*3/4));
+  -ms-transform: translateX(calc(var(--font-h)*3/4));
+  -o-transform: translateX(calc(var(--font-h)*3/4));
+  transform: translateX(calc(var(--font-h)*3/4));
+  color: var(--text);
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -99,10 +152,10 @@ a {
 
 @media (hover: hover) and (pointer: fine) {
   .navbar a.section-button {
-    transition: background-color 0.2s ease;
-    -webkit-transition: background-color 0.2s ease;
-    -moz-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
 
   .navbar a.section-button:hover {
@@ -168,10 +221,10 @@ a {
 
 @media (hover: hover) and (pointer: fine) {
   .project-container a.project-thumb {
-    transition: color 0.4s, background-color 0.4s;
-    -webkit-transition: color 0.4s, background-color 0.4s;
-    -moz-transition: color 0.4s, background-color 0.4s;
-    -o-transition: color 0.4s, background-color 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
   }
 
   .project-container a.project-thumb:hover {
@@ -194,10 +247,10 @@ a {
   padding: 4vh 1vw;
   box-sizing: border-box;
   margin: -100% 0%;
-  transition: margin 0.2s;
-  -webkit-transition: margin 0.2s;
-  -moz-transition: margin 0.2s;
-  -o-transition: margin 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .project-content button.project-content-close {
@@ -245,10 +298,10 @@ a {
 
 @media (hover: hover) and (pointer: fine) {
   .contacts a {
-    transition: background-color 0.2s ease;
-    -webkit-transition: background-color 0.2s ease;
-    -moz-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
 
   .contacts a:hover {
@@ -256,10 +309,10 @@ a {
   }
 
   .contacts button {
-    transition: background-color 0.2s ease;
-    -webkit-transition: background-color 0.2s ease;
-    -moz-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
 
   .contacts button:hover {
