@@ -126,7 +126,7 @@ a {
   border: 1px solid var(--black-primary);
 }
 
-#projects-container {
+#projects {
   background: none;
   border: none;
   width: 100%;
@@ -135,25 +135,28 @@ a {
 }
 
 @media (max-aspect-ratio: 1/1) {
-  #projects-container {
+  #projects {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-#projects-container .cell {
+.project-cell {
   aspect-ratio: 1/1;
   position: relative;
-  cursor: pointer;
   margin-top: -5px;
+  display: grid;
+  overflow: hidden;
 }
 
-#projects-container .cell img {
+.project-cell img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  grid-column: 1;
+  grid-row: 1;
 }
 
-#projects-container .cell a {
+.project-cell a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,11 +165,13 @@ a {
   font-size: var(--font-header);
   height: 100%;
   width: 100%;
-  position: absolute;
+  cursor: pointer;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 @media (hover) {
-  #projects-container .cell a {
+  .project-cell a {
     transition: color 0.4s, background-color 0.4s;
     -webkit-transition: color 0.4s, background-color 0.4s;
     -moz-transition: color 0.4s, background-color 0.4s;
@@ -174,10 +179,40 @@ a {
     -ms-transition: color 0.4s, background-color 0.4s;
   }
 
-  #projects-container .cell a:hover {
+  .project-cell a:hover {
     background-color: #00000088;
     color: var(--light-secondary);
   }
+}
+
+.project-cell div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black-secondary);
+  height: 100%;
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  margin: -100% 0%;
+  transition: margin 0.2s;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  -ms-transition: margin 0.2s;
+}
+
+.project-cell button {
+  background: none;
+  border: none;
+  color: var(--light-primary);
+  font-size: var(--font-p);
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin: 0.5em;
+  cursor: pointer;
 }
 
 #contact {
