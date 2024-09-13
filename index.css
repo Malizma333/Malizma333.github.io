@@ -144,7 +144,6 @@ a {
 .project-cell {
   aspect-ratio: 1/1;
   position: relative;
-  margin-top: -5px;
   display: grid;
   overflow: hidden;
 }
@@ -197,7 +196,7 @@ a {
   grid-column: 1;
   grid-row: 1;
   position: relative;
-  padding: 0em 2em;
+  padding: 4vh 1vw;
   box-sizing: border-box;
   margin: -100% 0%;
   transition: margin 0.2s;
@@ -215,7 +214,7 @@ a {
   font-size: var(--font-header);
 }
 
-.project-card button {
+.project-card button.project-card-close {
   background: none;
   border: none;
   color: var(--light-primary);
@@ -223,7 +222,7 @@ a {
   position: absolute;
   top: 0px;
   right: 0px;
-  margin: 0.5em;
+  margin: 1vw;
   cursor: pointer;
 }
 
