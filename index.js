@@ -2,22 +2,22 @@ let currentCard = undefined;
 
 async function copyContact(event, contactRef, text) {
   event.preventDefault();
-
   const copyIcon = contactRef.getElementsByClassName("fa-copy")[0];
-  
-  var blob = new Blob([text], {type: 'text/plain'});
-  var item = new ClipboardItem({'text/plain': blob});
+
+  var blob = new Blob([text], { type: "text/plain" });
+  var item = new ClipboardItem({ "text/plain": blob });
+
   await navigator.clipboard.write([item]);
 
   copyIcon.classList.add("fa-check");
   contactRef.style.pointerEvents = "none";
   contactRef.style.cursor = "default";
 
-  setTimeout(() => {
-    copyIcon.classList.remove("fa-check");
-    contactRef.style.pointerEvents = "all";
-    contactRef.style.cursor = "pointer";
-  }, 500);
+  await new Promise(_ => setTimeout(_, 500));
+
+  copyIcon.classList.remove("fa-check");
+  contactRef.style.pointerEvents = "all";
+  contactRef.style.cursor = "pointer";
 }
 
 function showCard(event, nextCard) {
