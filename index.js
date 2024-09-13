@@ -6,7 +6,6 @@ const module = (function() {
       titleText: "Line Rider Web",
       titleLink: "https://www.linerider.com",
       description: "Line Rider Web is a revision of the 2006 flash game Line Rider built for the web.",
-      thumbText: "Line Rider Web",
       thumbSrc: "assets/lrweb-banner.png",
       thumbAlt: "Line rider web card preview",
       devIcons: [["devicon-react-original", "React"], ["devicon-materialui-plain", "MaterialUI"], ["devicon-bash-plain","Bash"]]
@@ -15,7 +14,6 @@ const module = (function() {
       titleText: "Line Rider Desktop",
       titleLink: "https://github.com/LunaKampling/LROverhaul",
       description: "Line Rider Desktop is another revision of Line Rider built as a Windows desktop app.",
-      thumbText: "Line Rider Desktop",
       thumbSrc: "assets/lra-banner.png",
       thumbAlt: "Line rider advanced card preview",
       devIcons: [["devicon-csharp-plain", "C#"]]
@@ -24,7 +22,6 @@ const module = (function() {
       titleText: "Line Rider Web Guide",
       titleLink: "https://malizma333.github.io/line-rider-web-guide",
       description: "The Line Rider guide is a collection of articles and tutorials relating to Line Rider Web.",
-      thumbText: "Line Rider Documentation",
       thumbSrc: "assets/lrdocs-thumb.png",
       thumbAlt: "Line rider documentation card preview",
       devIcons: [["devicon-markdown-original", "Markdown"], ["devicon-jekyll-plain", "Jekyll"]]
@@ -34,7 +31,6 @@ const module = (function() {
   function generateProjectCard({
     thumbAlt,
     thumbSrc,
-    thumbText,
     titleLink,
     titleText,
     description,
@@ -44,17 +40,15 @@ const module = (function() {
     return `
     <div class="project-container">
       <img alt="${thumbAlt}" src="${thumbSrc}"/>
-      <a class="h-text project-thumb">${thumbText}</a>
+      <button class="h-text project-thumb">${titleText}</button>
       <div class="project-content">
         <button class="p-text project-content-close">
           <i class="fa fa-solid fa-xmark"></i>
         </button>
-        <a href="${titleLink}">
-          <p class="h-text">${titleText}
-            <i class="fa fa-solid fa-up-right-from-square"></i>
-          </p>
+        <a class="h-text" href="${titleLink}">
+          ${titleText} <sup><i class="s-text fa fa-solid fa-up-right-from-square"></i></sup>
         </a>
-        <span class="p-text">${icons}</span>
+        <span class="h-text">${icons}</span>
         <p class="p-text">${description}</p>
       </div>
     </div>`;

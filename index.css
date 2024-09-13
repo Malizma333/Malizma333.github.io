@@ -7,8 +7,8 @@
   --text: #c6c3b6;
   --white: #dddace;
 
-  --font-h: max(2vw, 10px);
-  --font-p: max(1.25vw, 8px);
+  --font-h: max(1.75vw, 10px);
+  --font-p: max(1vw, 8px);
   --font-s: max(0.75vw, 6px);
 }
 
@@ -60,10 +60,27 @@ main {
 a {
   color: var(--cyan);
   text-decoration: none;
+  background-color: transparent;
+  border-radius: 0.25em;
+  padding: 0.25em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a {
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
+  }
+
+  a:hover {
+    background-color: var(--blue);
+  }
 }
 
 .h-text {
   font-size: var(--font-h);
+  margin-bottom: 0.25em;
 }
 
 .p-text {
@@ -91,23 +108,7 @@ a {
 }
 
 .navbar a.section-button {
-  background-color: var(--black);
-  border-radius: 0.25em;
-  padding: 0.25em;
   margin: 0 1em;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .navbar a.section-button {
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-  }
-
-  .navbar a.section-button:hover {
-    background-color: var(--blue);
-  }
 }
 
 .content {
@@ -153,51 +154,54 @@ a {
   grid-row: 1;
 }
 
-.project-container a.project-thumb {
+button.project-thumb {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #00000000;
-  color: #00000000;
+  border: none;
+  background-color: #00000088;
+  color: var(--text);
+  cursor: pointer;
   height: 100%;
   width: 100%;
-  cursor: pointer;
+  padding: 1vw 1vw;
+  box-sizing: border-box;
   grid-column: 1;
   grid-row: 1;
+  opacity: 0;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .project-container a.project-thumb {
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
+  button.project-thumb {
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    -o-transition: opacity 0.4s;
+    transition: opacity 0.4s;
   }
 
-  .project-container a.project-thumb:hover {
-    background-color: #00000088;
-    color: var(--text);
+  button.project-thumb:hover {
+    opacity: 1;
   }
 }
 
 .project-content {
   display: flex;
   align-items: center;
-  justify-content: top;
+  justify-content: center;
   flex-direction: column;
   background-color: var(--dark);
   height: 100%;
   width: 100%;
+  padding: 1vw;
+  box-sizing: border-box;
   grid-column: 1;
   grid-row: 1;
   position: relative;
-  padding: 4vh 1vw;
-  box-sizing: border-box;
   margin: -100% 0%;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: margin 0.2s;
+  -moz-transition: margin 0.2s;
+  -o-transition: margin 0.2s;
+  transition: margin 0.2s;
 }
 
 .project-content button.project-content-close {
@@ -217,25 +221,15 @@ a {
   flex-direction: column;
   text-wrap: nowrap;
   padding: 2em 0;
-}
-
-.contacts ul {
-  list-style-type: none;
   text-align: left;
 }
 
-.contacts li {
-  margin-bottom: 1em;
-}
-
-.contacts a {
-  background-color: var(--black);
-  border-radius: 0.25em;
-  padding: 0.25em;
+.contacts button,a {
+  margin-bottom: 0.5em;
 }
 
 .contacts button {
-  background-color: var(--black);
+  background-color: transparent;
   color: var(--text);
   border: none;
   border-radius: 0.25em;
@@ -244,22 +238,11 @@ a {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .contacts a {
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
-  }
-
-  .contacts a:hover {
-    background-color: var(--dark);
-  }
-
   .contacts button {
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -o-transition: 0.2s;
-    transition: 0.2s;
+    -webkit-transition: background-color 0.2s;
+    -moz-transition: background-color 0.2s;
+    -o-transition: background-color 0.2s;
+    transition: background-color 0.2s;
   }
 
   .contacts button:hover {
@@ -272,4 +255,5 @@ a {
   display: flex;
   justify-content: center;
   flex: 1;
+  font-style: italic;
 }
