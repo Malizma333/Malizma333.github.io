@@ -1,5 +1,46 @@
 let currentCard = undefined;
 
+const projectsArray = [
+  {
+    titleText: "Line Rider Web",
+    titleLink: "https://www.linerider.com/",
+    description: "Description3",
+    thumbText: "Line Rider Web",
+    thumbSrc: "assets/lrweb-banner.png",
+    thumbAlt: "Line rider web card preview",
+    devIcons: [["react-original", "React"], ["materialui-plain", "MaterialUI"], ["bash-plain","Bash"]]
+  },
+];
+
+function generateProjectCard({
+  thumbAlt,
+  thumbSrc,
+  thumbText,
+  titleLink,
+  titleText,
+  description,
+  devIcons
+}) {
+  const icons = devIcons.map(icon => `<i class="devicon-${icon[0]}" title="${icon[1]}"></i>`).join(' ');
+  return `
+  <div class="project-container">
+    <img alt="${thumbAlt}" src="${thumbSrc}"/>
+    <a class="project-thumb">${thumbText}</a>
+    <div class="project-content">
+      <button class="project-content-close">
+        <i class="fa fa-solid fa-xmark"></i>
+      </button>
+      <a href="${titleLink}">
+        <h1>${titleText}
+          <i class="fa fa-solid fa-up-right-from-square"></i>
+        </h1>
+      </a>
+      <span>${icons}</span>
+      <p>${description}</p>
+    </div>
+  </div>`;
+}
+
 async function copyContact(event, contactRef, text) {
   event.preventDefault();
   const copyIcon = contactRef.getElementsByClassName("fa-copy")[0];
@@ -49,6 +90,11 @@ window.onload = function() {
     async (e) => copyContact(e, discordContactLink, "malizma"),
     false
   );
+
+  const projectDiv = document.getElementById("projects");
+  for(const projectData of projectsArray) {
+    projectDiv.innerHTML += generateProjectCard(projectData);
+  }
 
   const projectCells = document.getElementsByClassName("project-container");
 
