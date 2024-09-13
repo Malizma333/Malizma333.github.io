@@ -43,7 +43,7 @@ const module = (function() {
       <button class="h-text project-thumb">${titleText}</button>
       <div class="project-content">
         <button class="p-text project-content-close">
-          <i class="fa fa-solid fa-xmark"></i>
+          <i class="h-text fa fa-solid fa-xmark"></i>
         </button>
         <a class="h-text" href="${titleLink}">
           ${titleText} <sup><i class="s-text fa fa-solid fa-up-right-from-square"></i></sup>
