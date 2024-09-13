@@ -99,10 +99,10 @@ a {
 
 @media (hover: hover) and (pointer: fine) {
   .navbar a.section-button {
-    transition: background-color 0.2s ease;
-    -webkit-transition: background-color 0.2s ease;
-    -moz-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
 
   .navbar a.section-button:hover {
@@ -168,10 +168,10 @@ a {
 
 @media (hover: hover) and (pointer: fine) {
   .project-container a.project-thumb {
-    transition: color 0.4s, background-color 0.4s;
-    -webkit-transition: color 0.4s, background-color 0.4s;
-    -moz-transition: color 0.4s, background-color 0.4s;
-    -o-transition: color 0.4s, background-color 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
   }
 
   .project-container a.project-thumb:hover {
@@ -194,10 +194,10 @@ a {
   padding: 4vh 1vw;
   box-sizing: border-box;
   margin: -100% 0%;
-  transition: margin 0.2s;
-  -webkit-transition: margin 0.2s;
-  -moz-transition: margin 0.2s;
-  -o-transition: margin 0.2s;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .project-content button.project-content-close {
@@ -245,10 +245,10 @@ a {
 
 @media (hover: hover) and (pointer: fine) {
   .contacts a {
-    transition: background-color 0.2s ease;
-    -webkit-transition: background-color 0.2s ease;
-    -moz-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
 
   .contacts a:hover {
@@ -256,10 +256,10 @@ a {
   }
 
   .contacts button {
-    transition: background-color 0.2s ease;
-    -webkit-transition: background-color 0.2s ease;
-    -moz-transition: background-color 0.2s ease;
-    -o-transition: background-color 0.2s ease;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
   }
 
   .contacts button:hover {
