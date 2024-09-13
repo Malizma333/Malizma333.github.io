@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" href="assets/icon.svg" />
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <script src="index.js"></script>
   </head>
   <body>
     
@@ -42,18 +43,18 @@
           <div id="projects-container">
             <div class="column">
               <span>
-                <a href="https://www.linerider.com/">
+                <a onclick="showOverlay('line-rider-web')">
                   Line Rider Web
                 </a>
-                <img alt="Line rider web track preview" src="https://www.linerider.com/_v1977.0/social.png"/>
+                <img alt="Line rider web card preview" src="https://www.linerider.com/_v1977.0/social.png"/>
               </span>
             </div>
             <div class="column">
               <span>
-                <a href="https://github.com/LunaKampling/LROverhaul">
+                <a onclick="showOverlay('line-rider-desktop')">
                   Line Rider Desktop
                 </a>
-                <img alt="Line rider advanced track preview" src="https://linerideradvanced.com/wp-content/uploads/2018/09/peacefulnights.png"/>
+                <img alt="Line rider advanced card preview" src="https://linerideradvanced.com/wp-content/uploads/2018/09/peacefulnights.png"/>
               </span>
             </div>
           </div>
@@ -95,6 +96,24 @@
           Created with <a href="http://vanilla-js.com/">VanillaJS</a>. Hosted with <a href="https://pages.github.com/">GitHub Pages</a>.
           v0.1.2
         </sub>
+      </div>
+
+      <div id="overlay">
+        <div id="card-container">
+          <button onclick="hideOverlay()"><i class="fa fa-solid fa-xmark"></i></button>
+          <h1>Line Rider Web</h1>
+          <ul>
+            <li><img title="Angular logo" title="Angular" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png"></li>
+          </ul>
+          <div id="card-content">
+            <div id="site-thumbnail">
+              <a href="https://www.linerider.com">
+                <img alt="Line rider web thumbnail" src="https://www.linerider.com/_v1977.0/social.png"/>
+              </a>
+            </div>
+            <p>Paragraph text</p>  
+          </div>
+        </div>
       </div>
     </main>
   </body>
