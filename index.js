@@ -14,7 +14,7 @@ const module = (function() {
     {
       titleText: "Line Rider Desktop",
       titleLink: "https://github.com/LunaKampling/LROverhaul",
-      description: "Line Rider Desktop is another revision of the 2006 flash game Line Rider built for Windows machines.",
+      description: "Line Rider Desktop is another revision of Line Rider built as a Windows desktop app.",
       thumbText: "Line Rider Desktop",
       thumbSrc: "assets/lra-banner.png",
       thumbAlt: "Line rider advanced card preview",
@@ -23,7 +23,7 @@ const module = (function() {
     {
       titleText: "Line Rider Web Guide",
       titleLink: "https://malizma333.github.io/line-rider-web-guide",
-      description: "The Line Rider guide site is a collection of articles and tutorials relating to Line Rider Web.",
+      description: "The Line Rider guide is a collection of articles and tutorials relating to Line Rider Web.",
       thumbText: "Line Rider Documentation",
       thumbSrc: "assets/lrdocs-thumb.png",
       thumbAlt: "Line rider documentation card preview",
@@ -126,5 +126,6 @@ const module = (function() {
       closeButton.addEventListener("click", (e) => showCard(e, undefined), false);
     }
   }
+
   return undefined;
 })();
