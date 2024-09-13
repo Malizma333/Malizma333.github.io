@@ -5,26 +5,50 @@ const module = (function() {
     {
       titleText: "Line Rider Web",
       titleLink: "https://www.linerider.com",
-      description: "Line Rider Web is a revision of the 2006 flash game Line Rider built for the web.",
-      thumbSrc: "assets/lrweb-banner.png",
-      thumbAlt: "Line rider web card preview",
+      description: "Line Rider Web is a revision of the 2006 flash game Line Rider built for the web. I contributed highly-requested features and bugfixes.",
+      thumbSrc: "assets/lrweb-thumb.png",
+      thumbAlt: "",
       devIcons: [["devicon-react-original", "React"], ["devicon-materialui-plain", "MaterialUI"], ["devicon-bash-plain","Bash"]]
     },
     {
       titleText: "Line Rider Desktop",
       titleLink: "https://github.com/LunaKampling/LROverhaul",
-      description: "Line Rider Desktop is another revision of Line Rider built as a Windows desktop app.",
-      thumbSrc: "assets/lra-banner.png",
-      thumbAlt: "Line rider advanced card preview",
+      description: "Line Rider Desktop is another revision of Line Rider built as a Windows desktop app. I've assisted with cross-compatibility issues and feature requests.",
+      thumbSrc: "assets/lra-thumb.png",
+      thumbAlt: "",
       devIcons: [["devicon-csharp-plain", "C#"]]
     },
     {
       titleText: "Line Rider Web Guide",
       titleLink: "https://malizma333.github.io/line-rider-web-guide",
-      description: "The Line Rider guide is a collection of articles and tutorials relating to Line Rider Web.",
+      description: "The Line Rider guide is a collection of articles and tutorials on Line Rider Web written by me.",
       thumbSrc: "assets/lrdocs-thumb.png",
-      thumbAlt: "Line rider documentation card preview",
+      thumbAlt: "",
       devIcons: [["devicon-markdown-original", "Markdown"], ["devicon-jekyll-plain", "Jekyll"]]
+    },
+    {
+      titleText: "Userscript Mods",
+      titleLink: "https://github.com/Malizma333/linerider-userscript-mods",
+      description: "Line Rider Web offers mod support through userscript mods, of which I've written several.",
+      thumbSrc: "assets/userscript-thumb.png",
+      thumbAlt: "",
+      devIcons: [["devicon-javascript-plain", "JavaScript"]]
+    },
+    {
+      titleText: "Kakuro Solver Webapp",
+      titleLink: "https://kakuro-solver.vercel.app",
+      description: "Kakuro is a pen-and-paper game that's best described as a hybrid of crosswords and sudoku. I made a simple puzzle solver to practice recursive backtracking and try out the NextJS framework.",
+      thumbSrc: "assets/kakuro-thumb.png",
+      thumbAlt: "",
+      devIcons: [["devicon-nextjs-plain", "NextJS"], ["devicon-tailwindcss-original", "TailwindCSS"]]
+    },
+    {
+      titleText: "Quantum Tic-Tac-Toe",
+      titleLink: "https://malizma.itch.io/quantum-tic-tac-toe",
+      description: "Quantum Tic-Tac-Toe is like classical Tic-Tac-Toe, but you can play two move states that get entangled. This was made as a final project for the Qubit x Qubit quantum computing course.",
+      thumbSrc: "assets/quantum-thumb.png",
+      thumbAlt: "",
+      devIcons: [["devicon-unity-plain", "Unity"]]
     },
   ];
 
