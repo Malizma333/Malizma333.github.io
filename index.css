@@ -128,21 +128,23 @@ a {
 
 #projects-container {
   background: none;
-  display: flex;
-  flex-direction: row;
+  border: none;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-#projects-container .column {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+@media (max-aspect-ratio: 1/1) {
+  #projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 #projects-container .cell {
   aspect-ratio: 1/1;
   position: relative;
   cursor: pointer;
+  margin-top: -5px;
 }
 
 #projects-container .cell img {
