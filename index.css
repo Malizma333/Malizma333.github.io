@@ -127,7 +127,7 @@ a {
 }
 
 #projects-container {
-  background-color: var(--gray-primary);
+  background: none;
   display: flex;
   flex-direction: row;
   width: 100%;
