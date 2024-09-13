@@ -50,12 +50,12 @@ window.onload = function() {
     false
   );
 
-  const projectCells = document.getElementsByClassName("project-cell");
+  const projectCells = document.getElementsByClassName("project-container");
 
   for(const project of projectCells) {
-    const card = project.getElementsByClassName("project-card")[0];
+    const card = project.getElementsByClassName("project-content")[0];
     const openButton = project.getElementsByClassName("project-thumb")[0];
-    const closeButton = project.getElementsByClassName("project-card-close")[0];
+    const closeButton = project.getElementsByClassName("project-content-close")[0];
     openButton.addEventListener("click", (e) => showCard(e, card), false);
     closeButton.addEventListener("click", (e) => showCard(e, undefined), false);
   }
