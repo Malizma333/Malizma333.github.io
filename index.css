@@ -1,15 +1,11 @@
 :root {
-  --black-primary:#121212;
-  --black-secondary: #212121;
-  --blue-primary: #003656;
-  --blue-secondary: #00557c;
-  --cyan-primary: #035b7a;
-  --cyan-secondary: #0b7b9e;
-  --light-primary: #c6c3b6;
-  --light-secondary: #dddace;
-  --white-primary: #eaeaea;
-  --white-secondary: #f2f3f4;
-  --gray-primary: #6f7174;
+  --black:#121212;
+  --dark: #212121;
+  --blue: #003656;
+  --cyan: #0b7b9e;
+  --gray: #6f7174;
+  --text: #c6c3b6;
+  --white: #dddace;
 
   --font-header: min(28px, 3vw);
   --font-p: min(18px, 2.5vw);
@@ -25,8 +21,8 @@ html {
 body {
   align-items: center;
   justify-content: center;
-  background-color: var(--black-secondary);
-  color: var(--light-secondary);
+  background-color: var(--dark);
+  color: var(--text);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -37,7 +33,7 @@ body {
 
 main {
   align-items: center;
-  background-color: var(--black-primary);
+  background-color: var(--black);
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -70,7 +66,7 @@ p {
 }
 
 a {
-  color: var(--cyan-secondary);
+  color: var(--cyan);
   text-decoration: none;
 }
 
@@ -86,13 +82,13 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid var(--cyan-secondary);
+  border-bottom: 2px solid var(--cyan);
   padding: 0.25em;
 }
 
 #navbar a.section-button {
-  color: var(--cyan-secondary);
-  background-color: var(--black-primary);
+  color: var(--cyan);
+  background-color: var(--black);
   border-radius: 0.25em;
   padding: 0.25em;
   margin: 0em 1em;
@@ -109,12 +105,12 @@ a {
   }
 
   #navbar a.section-button:hover {
-    background-color: var(--blue-primary);
+    background-color: var(--blue);
   }
 }
 
 #content {
-  scrollbar-color: var(--gray-primary) var(--black-primary);
+  scrollbar-color: var(--gray) var(--black);
   overflow: scroll;
   overflow-x: hidden;
   padding: 0em 2em;
@@ -123,7 +119,7 @@ a {
 }
 
 #about {
-  border: 1px solid var(--black-primary);
+  border: 1px solid var(--black);
 }
 
 #projects {
@@ -160,7 +156,7 @@ a {
 }
 
 #contact i {
-  color: var(--light-primary);
+  color: var(--text);
 }
 
 #contact i.fa-copy,#contact i.fa-check {
@@ -168,8 +164,8 @@ a {
 }
 
 #contact a {
-  color: var(--light-primary);
-  background-color: var(--black-primary);
+  color: var(--text);
+  background-color: var(--black);
   border-radius: 0.25em;
   padding: 0.25em;
   cursor: pointer;
@@ -185,7 +181,7 @@ a {
   }
 
   #contact a:hover {
-    background-color: var(--black-secondary);
+    background-color: var(--dark);
   }
 }
 
@@ -240,7 +236,7 @@ a {
 
   .project-container a.project-thumb:hover {
     background-color: #00000088;
-    color: var(--light-secondary);
+    color: var(--text);
   }
 }
 
@@ -249,7 +245,7 @@ a {
   align-items: center;
   justify-content: top;
   flex-direction: column;
-  background-color: var(--black-secondary);
+  background-color: var(--dark);
   height: 100%;
   width: 100%;
   grid-column: 1;
@@ -266,17 +262,12 @@ a {
 }
 
 .project-content a {
-  color: var(--white-primary);
+  color: var(--cyan);
   text-decoration: none;
 }
 
-.project-content a svg {
-  color: var(--white-primary);
-  height: var(--font-header);
-  width: var(--font-header);
-}
-
 .project-content span {
+  color: var(--text);
   font-size: var(--font-header);
 }
 
@@ -289,5 +280,5 @@ a {
   margin: 1vw;
   cursor: pointer;
   font-size: var(--font-header);
-  color: var(--light-secondary);
+  color: var(--gray);
 }
