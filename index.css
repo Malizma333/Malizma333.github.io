@@ -204,11 +204,12 @@ button.project-thumb {
   transition: margin 0.2s;
 }
 
-.project-content a.h-text {
+p.description a {
   background: none;
+  padding: 0;
 }
 
-.project-content button.project-content-close {
+button.project-content-close {
   background: none;
   border: none;
   position: absolute;

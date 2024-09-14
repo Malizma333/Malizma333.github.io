@@ -4,50 +4,44 @@ const module = (function() {
   const projectsArray = [
     {
       titleText: "Line Rider Web",
-      titleLink: "https://www.linerider.com",
-      description: "Line Rider Web is a revision of the 2006 flash game Line Rider built for the web. I contributed highly-requested features and bugfixes.",
+      description: "[Line Rider Web](https://www.linerider.com) is a revision of the 2006 flash game Line Rider built for the web. I contributed highly-requested features and bugfixes.",
       thumbSrc: "assets/lrweb-thumb.png",
-      thumbAlt: "",
+      thumbAlt: "Thumbnail for the official Line Rider website.",
       devIcons: [["devicon-react-original", "React"], ["devicon-materialui-plain", "MaterialUI"], ["devicon-bash-plain","Bash"]]
     },
     {
       titleText: "Line Rider Desktop",
-      titleLink: "https://github.com/LunaKampling/LROverhaul",
-      description: "Line Rider Desktop is another revision of Line Rider built as a Windows desktop app. I've assisted with cross-compatibility issues and feature requests.",
+      description: "Line Rider Desktop is another revision of Line Rider built as a Windows desktop app. I've assisted with cross-compatibility issues and feature requests. The public repository can be found [here](https://github.com/LunaKampling/LROverhaul).",
       thumbSrc: "assets/lra-thumb.png",
-      thumbAlt: "",
+      thumbAlt: "Banner for the desktop edition of Line Rider.",
       devIcons: [["devicon-csharp-plain", "C#"]]
     },
     {
       titleText: "Line Rider Web Guide",
-      titleLink: "https://malizma333.github.io/line-rider-web-guide",
-      description: "The Line Rider guide is a collection of articles and tutorials on Line Rider Web written by me.",
+      description: "The [Line Rider web guide](https://malizma333.github.io/line-rider-web-guide) is a collection of articles and tutorials oriented towards heavier users of Line Rider web.",
       thumbSrc: "assets/lrdocs-thumb.png",
-      thumbAlt: "",
+      thumbAlt: "Screenshot of the Line Rider web guide.",
       devIcons: [["devicon-markdown-original", "Markdown"], ["devicon-jekyll-plain", "Jekyll"]]
     },
     {
       titleText: "Userscript Mods",
-      titleLink: "https://github.com/Malizma333/linerider-userscript-mods",
-      description: "Line Rider Web offers mod support through userscript mods, of which I've written several.",
+      description: "Line Rider Web offers mod support through userscripts that inject JavaScript into the site. Userscript-based mods I've developed can be found at [this repository](https://github.com/Malizma333/linerider-userscript-mods).",
       thumbSrc: "assets/userscript-thumb.png",
-      thumbAlt: "",
+      thumbAlt: "Screenshot of the Tampermonkey dashboard, showcasing a list of Line Rider related userscripts.",
       devIcons: [["devicon-javascript-plain", "JavaScript"]]
     },
     {
       titleText: "Kakuro Solver Webapp",
-      titleLink: "https://kakuro-solver.vercel.app",
-      description: "Kakuro is a pen-and-paper game that's best described as a hybrid of crosswords and sudoku. I made a simple puzzle solver to practice recursive backtracking and try out the NextJS framework.",
+      description: "Kakuro is a pen-and-paper game that's best described as a hybrid of crosswords and sudoku. I made a simple puzzle solver to practice recursive backtracking and try out the NextJS framework. [Here](https://kakuro-solver.vercel.app) is the website, hosted by Vercel.",
       thumbSrc: "assets/kakuro-thumb.png",
-      thumbAlt: "",
+      thumbAlt: "Partial screenshot of a solved kakuro board.",
       devIcons: [["devicon-nextjs-plain", "NextJS"], ["devicon-tailwindcss-original", "TailwindCSS"]]
     },
     {
       titleText: "Quantum Tic-Tac-Toe",
-      titleLink: "https://malizma.itch.io/quantum-tic-tac-toe",
-      description: "Quantum Tic-Tac-Toe is like classical Tic-Tac-Toe, but you can play two move states that get entangled. This was made as a final project for the Qubit x Qubit quantum computing course.",
+      description: "Quantum Tic-Tac-Toe is like classical Tic-Tac-Toe, but you can play two move states that get entangled. This was made as a final project for the Qubit x Qubit quantum computing course. The web-ported version is being hosted [here](https://malizma.itch.io/quantum-tic-tac-toe) on itch.io.",
       thumbSrc: "assets/quantum-thumb.png",
-      thumbAlt: "",
+      thumbAlt: "Screenshot of a quantum tic-tac-toe board.",
       devIcons: [["devicon-unity-plain", "Unity"]]
     },
   ];
@@ -55,12 +49,12 @@ const module = (function() {
   function generateProjectCard({
     thumbAlt,
     thumbSrc,
-    titleLink,
     titleText,
     description,
     devIcons
   }) {
     const icons = devIcons.map(icon => `<i class="${icon[0]}" title="${icon[1]}"></i>`).join(' ');
+    const newDescription = description.replace(/[\[](.+?)[\]][\(](.+?)[\)]/, "<a href=\"$2\">$1</a>");
     return `
     <div class="project-container">
       <img alt="${thumbAlt}" src="${thumbSrc}"/>
@@ -69,11 +63,11 @@ const module = (function() {
         <button class="p-text project-content-close">
           <i class="h-text fa fa-solid fa-xmark"></i>
         </button>
-        <a class="h-text" href="${titleLink}">
-          ${titleText} <sup><i class="s-text fa fa-solid fa-up-right-from-square"></i></sup>
-        </a>
+        <p class="h-text">
+          ${titleText}
+        </p>
         <span class="h-text">${icons}</span>
-        <p class="p-text">${description}</p>
+        <p class="p-text description">${newDescription}</p>
       </div>
     </div>`;
   }
