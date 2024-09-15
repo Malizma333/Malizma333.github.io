@@ -44,6 +44,13 @@ const module = (function() {
       thumbAlt: "Screenshot of a quantum tic-tac-toe board.",
       devIcons: [["devicon-unity-plain", "Unity"]]
     },
+    {
+      titleText: "Rooftop Bebop",
+      description: "Rooftop Bebop is a 2D survival shooter game made in 2 weeks for the DigiPen summer game development course. It is available to download [here](https://games.digipen.edu/games/rooftop-bebop).",
+      thumbSrc: "assets/rooftopbebop-thumb.png",
+      thumbAlt: "Screenshot of Rooftop Bebop gameplay.",
+      devIcons: [["devicon-unity-plain", "Unity"]]
+    }
   ];
 
   function generateProjectCard({
