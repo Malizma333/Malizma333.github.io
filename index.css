@@ -57,6 +57,10 @@ main {
   }
 }
 
+hr {
+  width: 100%;
+}
+
 a {
   color: var(--cyan);
   text-decoration: none;
@@ -115,9 +119,9 @@ a {
   scrollbar-color: var(--gray) var(--black);
   overflow: scroll;
   overflow-x: hidden;
-  padding: 0 2em;
   flex: 20;
   scroll-behavior: smooth;
+  width: calc(100% - 4em);
 }
 
 .about {
