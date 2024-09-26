@@ -5,49 +5,49 @@ const module = (function() {
     {
       titleText: "Line Rider Web",
       description: "[Line Rider Web](https://www.linerider.com) is a revision of the 2006 flash game Line Rider built for the web. I contributed highly-requested features and bugfixes.",
-      thumbSrc: "assets/lrweb-thumb.png",
+      thumbSrc: "assets/lrweb-thumb-cropped.png",
       thumbAlt: "Thumbnail for the official Line Rider website.",
       devIcons: [["devicon-react-original", "React"], ["devicon-materialui-plain", "MaterialUI"], ["devicon-bash-plain","Bash"]]
     },
     {
       titleText: "Line Rider Desktop",
       description: "Line Rider Desktop is another revision of Line Rider built as a Windows desktop app. I've assisted with cross-compatibility issues and feature requests. The public repository can be found [here](https://github.com/LunaKampling/LROverhaul).",
-      thumbSrc: "assets/lra-thumb.png",
+      thumbSrc: "assets/lra-thumb-cropped.png",
       thumbAlt: "Banner for the desktop edition of Line Rider.",
       devIcons: [["devicon-csharp-plain", "C#"]]
     },
     {
       titleText: "Line Rider Web Guide",
       description: "The [Line Rider web guide](https://malizma333.github.io/line-rider-web-guide) is a collection of articles and tutorials oriented towards heavier users of Line Rider web.",
-      thumbSrc: "assets/lrdocs-thumb.png",
+      thumbSrc: "assets/lrdocs-thumb-cropped.png",
       thumbAlt: "Screenshot of the Line Rider web guide.",
       devIcons: [["devicon-markdown-original", "Markdown"], ["devicon-jekyll-plain", "Jekyll"]]
     },
     {
       titleText: "Userscript Mods",
       description: "Line Rider Web offers mod support through userscripts that inject JavaScript into the site. Userscript-based mods I've developed can be found at [this repository](https://github.com/Malizma333/linerider-userscript-mods).",
-      thumbSrc: "assets/userscript-thumb.png",
+      thumbSrc: "assets/userscript-thumb-cropped.png",
       thumbAlt: "Screenshot of the Tampermonkey dashboard, showcasing a list of Line Rider related userscripts.",
       devIcons: [["devicon-javascript-plain", "JavaScript"]]
     },
     {
       titleText: "Kakuro Solver Webapp",
       description: "Kakuro is a pen-and-paper game that's best described as a hybrid of crosswords and sudoku. I made a simple puzzle solver to practice recursive backtracking and try out the NextJS framework. [Here](https://kakuro-solver.vercel.app) is the website, hosted by Vercel.",
-      thumbSrc: "assets/kakuro-thumb.png",
+      thumbSrc: "assets/kakuro-thumb-cropped.png",
       thumbAlt: "Partial screenshot of a solved kakuro board.",
       devIcons: [["devicon-nextjs-plain", "NextJS"], ["devicon-tailwindcss-original", "TailwindCSS"]]
     },
     {
       titleText: "Quantum Tic-Tac-Toe",
       description: "Quantum Tic-Tac-Toe is like classical Tic-Tac-Toe, but you can play two move states that get entangled. This was made as a final project for the Qubit x Qubit quantum computing course. The web-ported version is being hosted [here](https://malizma.itch.io/quantum-tic-tac-toe) on itch.io.",
-      thumbSrc: "assets/quantum-thumb.png",
+      thumbSrc: "assets/quantum-thumb-cropped.png",
       thumbAlt: "Screenshot of a quantum tic-tac-toe board.",
       devIcons: [["devicon-unity-plain", "Unity"]]
     },
     {
       titleText: "Rooftop Bebop",
       description: "Rooftop Bebop is a 2D survival shooter game made in 2 weeks for the DigiPen summer game development course. It is available to download [here](https://games.digipen.edu/games/rooftop-bebop).",
-      thumbSrc: "assets/rooftopbebop-thumb.png",
+      thumbSrc: "assets/rooftopbebop-thumb-cropped.png",
       thumbAlt: "Screenshot of Rooftop Bebop gameplay.",
       devIcons: [["devicon-unity-plain", "Unity"]]
     }
