@@ -7,9 +7,9 @@
   --text: #c6c3b6;
   --white: #dddace;
 
-  --font-h: max(1.75vw, 10px);
-  --font-p: max(1vw, 8px);
-  --font-s: max(0.75vw, 6px);
+  --font-h: max(1.75vw, 12px);
+  --font-p: max(1vw, 12px);
+  --font-s: max(0.75vw, 11px);
 }
 
 html {
@@ -135,7 +135,7 @@ a {
   margin-top: 1em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  aspect-ratio: 3/3; /* Update to be ceiling of projects/3 */
+  aspect-ratio: 3/3; /* Update to be ⌈projects/3⌉ */
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -193,21 +193,28 @@ button.project-thumb {
 .project-content {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: top;
   flex-direction: column;
   background-color: var(--dark);
   height: 100%;
   width: 100%;
-  padding: 1vw;
-  box-sizing: border-box;
   grid-column: 1;
   grid-row: 1;
   position: relative;
+  overflow: hidden;
   margin: -100% 0%;
   -webkit-transition: margin 0.2s;
   -moz-transition: margin 0.2s;
   -o-transition: margin 0.2s;
   transition: margin 0.2s;
+}
+
+.project-text {
+  width: 100%;
+  height: 100%;
+  padding: 1vw 2vw;
+  box-sizing: border-box;
+  overflow: auto;
 }
 
 p.description a {

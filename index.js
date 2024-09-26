@@ -70,11 +70,13 @@ const module = (function() {
         <button class="p-text project-content-close" aria-label="Close Preview">
           <i class="h-text fa fa-solid fa-xmark"></i>
         </button>
-        <p class="h-text">
-          ${titleText}
-        </p>
-        <span class="h-text">${icons}</span>
-        <p class="p-text description">${newDescription}</p>
+        <div class="project-text">
+          <p class="h-text">
+            ${titleText}
+          </p>
+          <span class="h-text">${icons}</span>
+          <p class="p-text description">${newDescription}</p>
+        </div>
       </div>
     </div>`;
   }
@@ -104,6 +106,9 @@ const module = (function() {
 
     if(currentCard !== undefined) {
       currentCard.style.margin = "-100% 0%";
+      const textContent = currentCard.querySelector(".project-text");
+      console.log(textContent);
+      if(textContent) textContent.scrollTo(0,0);
     }
 
     currentCard = nextCard;
