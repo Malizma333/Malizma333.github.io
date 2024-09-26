@@ -67,7 +67,7 @@ const module = (function() {
       <img alt="${thumbAlt}" src="${thumbSrc}"/>
       <button class="h-text project-thumb">${titleText}</button>
       <div class="project-content">
-        <button class="p-text project-content-close">
+        <button class="p-text project-content-close" aria-label="Close Preview">
           <i class="h-text fa fa-solid fa-xmark"></i>
         </button>
         <p class="h-text">
