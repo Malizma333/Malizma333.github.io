@@ -11,7 +11,7 @@ const module = (function() {
     },
     {
       titleText: "Line Rider Desktop",
-      description: "Line Rider Desktop is another revision of Line Rider built as a Windows desktop app. I've assisted with cross-compatibility issues and feature requests. The public repository can be found [here](https://github.com/LunaKampling/LROverhaul).",
+      description: "Line Rider Desktop is another revision of Line Rider built as a Windows desktop app. I've assisted with cross-compatibility issues and feature requests. The download is publicly available at [this GitHub repository](https://github.com/LunaKampling/LROverhaul).",
       thumbSrc: "assets/lra-thumb-cropped.png",
       thumbAlt: "Banner for the desktop edition of Line Rider.",
       devIcons: [["devicon-csharp-plain", "C#"]]
@@ -32,21 +32,21 @@ const module = (function() {
     },
     {
       titleText: "Kakuro Solver Webapp",
-      description: "Kakuro is a pen-and-paper game that's best described as a hybrid of crosswords and sudoku. I made a simple puzzle solver to practice recursive backtracking and try out the NextJS framework. [Here](https://kakuro-solver.vercel.app) is the website, hosted by Vercel.",
+      description: "Kakuro is a pen-and-paper game that's best described as a hybrid of crosswords and sudoku. I made a simple puzzle solver to practice recursive backtracking and try out the NextJS framework. [Here's the website](https://kakuro-solver.vercel.app) hosted by Vercel.",
       thumbSrc: "assets/kakuro-thumb-cropped.png",
       thumbAlt: "Partial screenshot of a solved kakuro board.",
       devIcons: [["devicon-nextjs-plain", "NextJS"], ["devicon-tailwindcss-original", "TailwindCSS"]]
     },
     {
       titleText: "Quantum Tic-Tac-Toe",
-      description: "Quantum Tic-Tac-Toe is like classical Tic-Tac-Toe, but you can play two move states that get entangled. This was made as a final project for the Qubit x Qubit quantum computing course. The web-ported version is being hosted [here](https://malizma.itch.io/quantum-tic-tac-toe) on itch.io.",
+      description: "Quantum Tic-Tac-Toe is like classical Tic-Tac-Toe, but you can play two move states that get entangled. This was made as a final project for the Qubit x Qubit quantum computing course. A [web-ported version of the game](https://malizma.itch.io/quantum-tic-tac-toe) is hosted on itch.io.",
       thumbSrc: "assets/quantum-thumb-cropped.png",
       thumbAlt: "Screenshot of a quantum tic-tac-toe board.",
       devIcons: [["devicon-unity-plain", "Unity"]]
     },
     {
       titleText: "Rooftop Bebop",
-      description: "Rooftop Bebop is a 2D survival shooter game made in 2 weeks for the DigiPen summer game development course. It is available to download [here](https://games.digipen.edu/games/rooftop-bebop).",
+      description: "Rooftop Bebop is a 2D survival shooter game made in 2 weeks for the DigiPen summer game development course. You can [download the game](https://games.digipen.edu/games/rooftop-bebop) in DigiPen's gallery.",
       thumbSrc: "assets/rooftopbebop-thumb-cropped.png",
       thumbAlt: "Screenshot of Rooftop Bebop gameplay.",
       devIcons: [["devicon-unity-plain", "Unity"]]
