@@ -135,11 +135,13 @@ a {
   margin-top: 1em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  aspect-ratio: 3/3; /* Update to be ceiling of projects/3 */
 }
 
 @media (max-aspect-ratio: 1/1) {
   .projects {
     grid-template-columns: repeat(2, 1fr);
+    aspect-ratio: 2/4;
   }
 }
 
