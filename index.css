@@ -10,6 +10,8 @@
   --font-h: max(1.75vw, 12px);
   --font-p: max(1vw, 12px);
   --font-s: max(0.75vw, 11px);
+
+  --projects: 7;
 }
 
 html {
@@ -58,6 +60,7 @@ main {
 }
 
 hr {
+  border-color: var(--text);
   width: 100%;
 }
 
@@ -135,7 +138,7 @@ a {
   margin-top: 1em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  aspect-ratio: 3/3; /* Update to be ⌈projects/3⌉ */
+  aspect-ratio: 3/round(up, calc(var(--projects) / 3), 1);
 }
 
 @media (max-aspect-ratio: 1/1) {
@@ -274,4 +277,33 @@ button.project-content-close {
   justify-content: center;
   flex: 1;
   font-style: italic;
+}
+
+.name-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.name-header span {
+  display: flex;
+  height: 1.25vw;
+  background-color: var(--text);
+  width: 100%;
+}
+
+.name-header svg {
+  fill: var(--text);
+  stroke-width: 0;
+  width: 100%;
+  margin-top: 1vw;
+  margin-bottom: -0.25vw;
+}
+
+.name-header-curtain {
+  position: absolute;
+  border: 0 solid var(--text);
+  border-top-width: 1.5vw;
+  margin-top: -1.5vw;
 }
