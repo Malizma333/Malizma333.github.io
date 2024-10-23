@@ -7,7 +7,7 @@
       description: '[Line Rider Web](https://www.linerider.com) is a revision of the 2006 flash game Line Rider built for the web. I contributed highly-requested features and bugfixes.',
       thumbSrc: 'assets/lrweb-thumb-cropped.png',
       thumbAlt: 'Thumbnail for the official Line Rider website.',
-      devIcons: [['devicon-react-original', 'React'], ['devicon-materialui-plain', 'MaterialUI'], ['devicon-bash-plain', 'Bash']]
+      devIcons: [['devicon-javascript-plain', 'JavaScript'], ['devicon-react-original', 'React'], ['devicon-materialui-plain', 'MaterialUI'], ['devicon-bash-plain', 'Bash']]
     },
     {
       titleText: 'Line Rider Desktop',
@@ -28,14 +28,14 @@
       description: "Line Rider Web offers mod support through userscripts that inject JavaScript into the site. Userscript-based mods I've developed can be found at [this repository](https://github.com/Malizma333/linerider-userscript-mods).",
       thumbSrc: 'assets/userscript-thumb-cropped.png',
       thumbAlt: 'Screenshot of the Tampermonkey dashboard, showcasing a list of Line Rider related userscripts.',
-      devIcons: [['devicon-javascript-plain', 'JavaScript']]
+      devIcons: [['devicon-javascript-plain', 'JavaScript'], ['devicon-typescript-plain', 'TypeScript']]
     },
     {
       titleText: 'Kakuro Solver Webapp',
       description: "Kakuro is a pen-and-paper game that's best described as a hybrid of crosswords and sudoku. I made a simple puzzle solver to practice recursive backtracking and try out the NextJS framework. [Here's the website](https://kakuro-solver.vercel.app) hosted by Vercel.",
       thumbSrc: 'assets/kakuro-thumb-cropped.png',
       thumbAlt: 'Partial screenshot of a solved kakuro board.',
-      devIcons: [['devicon-nextjs-plain', 'NextJS'], ['devicon-tailwindcss-original', 'TailwindCSS']]
+      devIcons: [['devicon-typescript-plain', 'TypeScript'], ['devicon-nextjs-plain', 'NextJS'], ['devicon-tailwindcss-original', 'TailwindCSS']]
     },
     {
       titleText: 'Quantum Tic-Tac-Toe',
