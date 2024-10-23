@@ -107,7 +107,6 @@
     if (currentCard !== undefined) {
       currentCard.style.margin = '-100% 0%'
       const textContent = currentCard.querySelector('.project-text')
-      console.log(textContent)
       if (textContent) textContent.scrollTo(0, 0)
     }
 
