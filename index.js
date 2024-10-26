@@ -140,7 +140,7 @@
 
       // Draw mouse clip
       ctx.beginPath()
-      ctx.arc(mouse.x, mouse.y, 30, 0, 2 * Math.PI)
+      ctx.arc(mouse.x, mouse.y, 50, 0, 2 * Math.PI)
       ctx.closePath()
       ctx.clip()
 
@@ -169,7 +169,6 @@
       e.preventDefault()
       const a = document.createElement('a')
       a.href = 'https://minesweeper.online/'
-      console.log(a)
       a.click()
       a.remove()
       ctx.clearRect(0, 0, canvas.width, canvas.height)
