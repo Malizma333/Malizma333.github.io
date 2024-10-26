@@ -164,6 +164,16 @@
       // Apply clip
       ctx.restore()
     }, false)
+
+    canvas.addEventListener('click', (e) => {
+      e.preventDefault()
+      const a = document.createElement('a')
+      a.href = 'https://minesweeper.online/'
+      console.log(a)
+      a.click()
+      a.remove()
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+    }, false)
   }
 
   function setupLinks () {
