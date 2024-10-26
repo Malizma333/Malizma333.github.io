@@ -33,6 +33,10 @@ body {
   padding: 0;
 }
 
+body canvas {
+  cursor: pointer;
+}
+
 main {
   align-items: center;
   background-color: var(--black);

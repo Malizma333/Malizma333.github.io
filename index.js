@@ -134,10 +134,35 @@
         x: e.clientX - rect.left,
         y: e.clientY - rect.top
       }
-      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx.save()
+
+      // Draw mouse clip
       ctx.beginPath()
       ctx.arc(mouse.x, mouse.y, 30, 0, 2 * Math.PI)
+      ctx.closePath()
+      ctx.clip()
+
+      // Draw background
+      ctx.strokeStyle = "white"
+      ctx.lineWidth = 2
+      const lineCount = 20
+      const delta = canvas.height / lineCount
+      ctx.beginPath()
+      for(let i = 0; i <= canvas.height; i += delta) {
+        ctx.moveTo(0, i)
+        ctx.lineTo(canvas.width, i)
+      }
+      for(let i = 0; i <= canvas.width; i += delta) {
+        ctx.moveTo(i, 0)
+        ctx.lineTo(i, canvas.height)
+      }
+      ctx.closePath()
       ctx.stroke()
+
+      // Apply clip
+      ctx.restore()
     }, false)
   }
 
