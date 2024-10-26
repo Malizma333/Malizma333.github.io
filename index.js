@@ -117,7 +117,31 @@
     }
   }
 
-  window.onload = function () {
+  function initCanvas () {
+    const canvas = document.getElementById('main-canvas')
+    const ctx = canvas.getContext('2d')
+    canvas.width = window.innerWidth
+    canvas.height = window.innerHeight
+
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth
+      canvas.height = window.innerHeight
+    }, false)
+
+    window.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect()
+      const mouse = {
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top
+      }
+      ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+      ctx.beginPath()
+      ctx.arc(mouse.x, mouse.y, 30, 0, 2 * Math.PI)
+      ctx.stroke()
+    }, false)
+  }
+
+  function setupLinks () {
     const emailContactLink = document.getElementById('contacts-email')
     const discordContactLink = document.getElementById('contacts-discord')
 
@@ -128,7 +152,9 @@
     discordContactLink.addEventListener(
       'click', async (e) => copyContact(e, discordContactLink, 'malizma'), false
     )
+  }
 
+  function createProjects () {
     const projectDiv = document.getElementById('projects')
 
     for (const projectData of projectsArray) {
@@ -152,6 +178,12 @@
     contentElement.addEventListener('scroll', (event) => {
       headerCurtain.style.top = `${Math.min(event.target.scrollTop, headerName.clientHeight)}px`
     })
+  }
+
+  window.onload = function () {
+    initCanvas()
+    setupLinks()
+    createProjects()
   }
 
   return undefined
