@@ -14,5 +14,5 @@ for filename in os.listdir(directory):
     else:
       avg = (bbox[2] - bbox[3]) / 2
       new_bbox = (avg, 0, bbox[2] - avg, bbox[3])
-    img2 = img.crop(new_bbox).resize((256,256), Image.Resampling.LANCZOS)
+    img2 = img.crop(new_bbox).resize((512,512), Image.Resampling.LANCZOS)
     img2.save(f2, optimize=True, quality=95)
