@@ -25,7 +25,7 @@
     },
     {
       titleText: 'Userscript Mods',
-      description: "Line Rider Web offers mod support through userscripts that inject JavaScript into the site. Userscript-based mods I've developed can be found at [this repository](https://github.com/Malizma333/linerider-userscript-mods).",
+      description: "Line Rider Web offers mod support through userscripts that inject JavaScript into the site. Userscript-based mods I've developed can be found at [this docs site](https://malizma333.github.io/linerider-userscript-mods/).",
       thumbSrc: 'assets/userscript-thumb-cropped.png',
       thumbAlt: 'Screenshot of the Tampermonkey dashboard, showcasing a list of Line Rider related userscripts.',
       devIcons: [['devicon-javascript-plain', 'JavaScript'], ['devicon-typescript-plain', 'TypeScript']]
