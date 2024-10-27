@@ -28,7 +28,7 @@ class CanvasHelper {
 
     this.canvas.addEventListener('click', () => {
       if (this.mode !== this.MODES.PREVIEW) return
-      document.querySelector('main').style.display = 'none'
+      document.querySelector('main').style['pointer-events'] = 'none'
       this.mode = this.MODES.EXPAND
       this.redraw()
     }, false)
@@ -49,7 +49,7 @@ class CanvasHelper {
         x: window.event.clientX - rect.left,
         y: window.event.clientY - rect.top
       }
-      this.expandClipPath(mouse, this.canvas, this.ctx)
+      this.transition(mouse, this.canvas, this.ctx)
     } else {
       this.drawBoard(this.canvas, this.ctx)
     }
@@ -95,11 +95,16 @@ class CanvasHelper {
     ctx.restore()
   }
 
-  static expandClipPath (mouse) {
+  static transition (mouse) {
     this.pathRadius += this.pathRadiusDelta
     this.drawClipPath(mouse, this.canvas, this.ctx)
-    if (Math.pow(this.pathRadius, 2) < Math.pow(this.canvas.width, 2) + Math.pow(this.canvas.height, 2)) {
-      window.requestAnimationFrame(() => this.expandClipPath(mouse))
+
+    const target = Math.pow(this.canvas.width, 2) + Math.pow(this.canvas.height, 2)
+    const progress = Math.pow(this.pathRadius, 2) / target
+    document.querySelector('main').style.marginTop = `-${progress * 110}vh`
+
+    if (progress < 1) {
+      window.requestAnimationFrame(() => this.transition(mouse))
     } else {
       this.mode = this.MODES.GAME
     }
