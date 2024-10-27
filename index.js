@@ -1,5 +1,5 @@
 (function () {
-  let currentCard, lastHash
+  let currentCard
 
   const projectsArray = [
     {
@@ -156,28 +156,10 @@
     })
   }
 
-  function initStep () {
-    document.querySelector('main').style.display = 'none'
-    CanvasHelper.load()
-  }
-
   window.onload = function () {
     CanvasHelper.initCanvas()
     setupLinks()
     createProjects()
-
-    lastHash = document.location.hash
-    if (lastHash === '#minesweeper') {
-      initStep()
-    }
-
-    window.navigation.addEventListener("navigate", (e) => {
-      console.log(lastHash, document.location.hash)
-      if (lastHash !== document.location.hash && document.location.hash === '#minesweeper') {
-        lastHash = document.location.hash
-        initStep()
-      }
-    })
   }
 
   return undefined
