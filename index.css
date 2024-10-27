@@ -320,16 +320,21 @@ button.project-content-close {
 .control-panel {
   position: fixed;
   top: 2vh;
-  left: 30vw;
-  width: 40vw;
-  height: 10vh;
+  left: 45vw;
+  width: 10vw;
+  height: 8vh;
   border-radius: 1vh;
   overflow: hidden;
-  background-color: var(--gray);
-  padding: 1vh;
-  box-sizing: border-box;
+  background-color: var(--text);
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1vh;
+  box-sizing: border-box;
+}
+
+.control-panel button {
+  border: none;
+  background: none;
+  cursor: pointer;
 }

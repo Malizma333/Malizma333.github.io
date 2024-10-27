@@ -21,6 +21,8 @@ class CanvasHelper {
     this.grid = Array(this.gridSize).fill().map(() => Array(this.gridSize).fill(0))
     this.previewSeenFlag = false
 
+    document.getElementById('pause-icon').style.display = 'none'
+
     window.addEventListener('resize', () => {
       this.canvas.width = window.innerWidth
       this.canvas.height = window.innerHeight
