@@ -177,7 +177,7 @@ button.project-thumb {
   align-items: center;
   justify-content: center;
   border: none;
-  background-color: #00000088;
+  background-color: #000000aa;
   color: var(--text);
   cursor: pointer;
   height: 100%;
