@@ -316,3 +316,20 @@ button.project-content-close {
   border-top-width: 1.5vw;
   margin-top: -1.5vw;
 }
+
+.control-panel {
+  position: fixed;
+  top: 2vh;
+  left: 30vw;
+  width: 40vw;
+  height: 10vh;
+  border-radius: 1vh;
+  overflow: hidden;
+  background-color: var(--gray);
+  padding: 1vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
