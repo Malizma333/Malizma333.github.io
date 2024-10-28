@@ -239,7 +239,7 @@ class CanvasHelper {
     this.grid[index[0]][index[1]] = !this.grid[index[0]][index[1]]
   }
 
-  static propagate() {
+  static propagate () {
     let currentRow = []
     let lastRow
     for (let i = 0; i < this.gridSize; i++) {
@@ -247,14 +247,14 @@ class CanvasHelper {
       currentRow = []
       for (let j = 0; j < this.gridSize; j++) {
         let count = 0
-        if (i > 0 && j > 0 && this.grid[i-1][j-1]) count += 1
-        if (i > 0 && this.grid[i-1][j]) count += 1
-        if (i > 0 && j < this.gridSize - 1 && this.grid[i-1][j+1]) count += 1
-        if (j > 0 && this.grid[i][j-1]) count += 1
-        if (j < this.gridSize - 1 && this.grid[i][j+1]) count += 1
-        if (i < this.gridSize - 1 && j > 0 && this.grid[i+1][j-1]) count += 1
-        if (i < this.gridSize - 1 && this.grid[i+1][j]) count += 1
-        if (i < this.gridSize - 1 && j < this.gridSize - 1 && this.grid[i+1][j+1]) count += 1
+        if (i > 0 && j > 0 && this.grid[i - 1][j - 1]) count += 1
+        if (i > 0 && this.grid[i - 1][j]) count += 1
+        if (i > 0 && j < this.gridSize - 1 && this.grid[i - 1][j + 1]) count += 1
+        if (j > 0 && this.grid[i][j - 1]) count += 1
+        if (j < this.gridSize - 1 && this.grid[i][j + 1]) count += 1
+        if (i < this.gridSize - 1 && j > 0 && this.grid[i + 1][j - 1]) count += 1
+        if (i < this.gridSize - 1 && this.grid[i + 1][j]) count += 1
+        if (i < this.gridSize - 1 && j < this.gridSize - 1 && this.grid[i + 1][j + 1]) count += 1
 
         if (count < 2 || count > 3) {
           currentRow.push(false)
@@ -264,17 +264,17 @@ class CanvasHelper {
           currentRow.push(this.grid[i][j])
         }
 
-        if(i > 0 && j > 0) {
-          this.grid[i-1][j-1] = lastRow[j-1]
+        if (i > 0 && j > 0) {
+          this.grid[i - 1][j - 1] = lastRow[j - 1]
         }
       }
-      if(i > 0) {
-        this.grid[i-1][this.gridSize-1] = lastRow[this.gridSize-1]
+      if (i > 0) {
+        this.grid[i - 1][this.gridSize - 1] = lastRow[this.gridSize - 1]
       }
     }
 
     for (let j = 0; j < this.gridSize; j++) {
-      this.grid[this.gridSize-1][j] = lastRow[j]
+      this.grid[this.gridSize - 1][j] = lastRow[j]
     }
   }
 
@@ -285,14 +285,14 @@ class CanvasHelper {
       this.simCounter += 1
     }
 
-    if(this.simCounter >= 6) {
+    if (this.simCounter >= 6) {
       this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
       this.propagate()
       this.drawBoard(this.canvas, this.ctx)
       this.simCounter = 0
     }
 
-    if(this.playing) {
+    if (this.playing) {
       window.requestAnimationFrame(() => this.simulateStep())
     }
   }
