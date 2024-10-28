@@ -18,10 +18,38 @@ class CanvasHelper {
     this.canvas.height = window.innerHeight
     this.mode = this.MODES.PREVIEW
     this.pathRadius = 50
-    this.grid = Array(this.gridSize).fill().map(() => Array(this.gridSize).fill(0))
+    this.grid = Array(this.gridSize).fill().map(() => Array(this.gridSize).fill(false))
     this.previewSeenFlag = false
+    this.playing = false
+    this.simCounter = 0
+    this.fastForward = false
 
     document.getElementById('pause-icon').style.display = 'none'
+    document.getElementById('play-button').addEventListener('click', () => {
+      if (this.playing) {
+        this.playing = false
+        document.getElementById('pause-icon').style.display = 'none'
+        document.getElementById('play-icon').style.display = 'inline'
+      } else {
+        this.playing = true
+        document.getElementById('pause-icon').style.display = 'inline'
+        document.getElementById('play-icon').style.display = 'none'
+        window.requestAnimationFrame(() => this.simulateStep())
+      }
+    }, false)
+
+    document.getElementById('fast-icon').style.display = 'none'
+    document.getElementById('speed-button').addEventListener('click', () => {
+      if (this.fastForward) {
+        this.fastForward = false
+        document.getElementById('fast-icon').style.display = 'none'
+        document.getElementById('forw-icon').style.display = 'inline'
+      } else {
+        this.fastForward = true
+        document.getElementById('fast-icon').style.display = 'inline'
+        document.getElementById('forw-icon').style.display = 'none'
+      }
+    }, false)
 
     window.addEventListener('resize', () => {
       this.canvas.width = window.innerWidth
@@ -136,7 +164,7 @@ class CanvasHelper {
 
     for (let i = 0; i < this.gridSize; i++) {
       for (let j = 0; j < this.gridSize; j++) {
-        if (this.grid[i][j] === 0) continue
+        if (!this.grid[i][j]) continue
         const target = [
           (i - this.gridSize / 2) * this.pixelSize + this.canvas.width / 2,
           (j - this.gridSize / 2) * this.pixelSize + this.canvas.height / 2
@@ -208,6 +236,64 @@ class CanvasHelper {
       return
     }
 
-    this.grid[index[0]][index[1]] = 1 - this.grid[index[0]][index[1]]
+    this.grid[index[0]][index[1]] = !this.grid[index[0]][index[1]]
+  }
+
+  static propagate() {
+    let currentRow = []
+    let lastRow
+    for (let i = 0; i < this.gridSize; i++) {
+      lastRow = [...currentRow]
+      currentRow = []
+      for (let j = 0; j < this.gridSize; j++) {
+        let count = 0
+        if (i > 0 && j > 0 && this.grid[i-1][j-1]) count += 1
+        if (i > 0 && this.grid[i-1][j]) count += 1
+        if (i > 0 && j < this.gridSize - 1 && this.grid[i-1][j+1]) count += 1
+        if (j > 0 && this.grid[i][j-1]) count += 1
+        if (j < this.gridSize - 1 && this.grid[i][j+1]) count += 1
+        if (i < this.gridSize - 1 && j > 0 && this.grid[i+1][j-1]) count += 1
+        if (i < this.gridSize - 1 && this.grid[i+1][j]) count += 1
+        if (i < this.gridSize - 1 && j < this.gridSize - 1 && this.grid[i+1][j+1]) count += 1
+
+        if (count < 2 || count > 3) {
+          currentRow.push(false)
+        } else if (count == 3) {
+          currentRow.push(true)
+        } else {
+          currentRow.push(this.grid[i][j])
+        }
+
+        if(i > 0 && j > 0) {
+          this.grid[i-1][j-1] = lastRow[j-1]
+        }
+      }
+      if(i > 0) {
+        this.grid[i-1][this.gridSize-1] = lastRow[this.gridSize-1]
+      }
+    }
+
+    for (let j = 0; j < this.gridSize; j++) {
+      this.grid[this.gridSize-1][j] = lastRow[j]
+    }
+  }
+
+  static simulateStep () {
+    if (this.fastForward) {
+      this.simCounter += 3
+    } else {
+      this.simCounter += 1
+    }
+
+    if(this.simCounter >= 6) {
+      this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+      this.propagate()
+      this.drawBoard(this.canvas, this.ctx)
+      this.simCounter = 0
+    }
+
+    if(this.playing) {
+      window.requestAnimationFrame(() => this.simulateStep())
+    }
   }
 }

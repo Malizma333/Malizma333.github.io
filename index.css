@@ -338,3 +338,7 @@ button.project-content-close {
   background: none;
   cursor: pointer;
 }
+
+.control-panel button i {
+  display: inline;
+}
