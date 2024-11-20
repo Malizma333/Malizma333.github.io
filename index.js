@@ -68,7 +68,10 @@
       <button class="h-text project-thumb">${titleText}</button>
       <div class="project-content">
         <button class="p-text project-content-close" aria-label="Close Preview">
-          <i class="h-text fa fa-solid fa-xmark"></i>
+          <svg x-bind:width="size" x-bind:height="size" viewBox="0 0 24 24" fill="none" stroke="currentColor" x-bind:stroke-width="stroke" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2">
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
         </button>
         <div class="project-text">
           <p class="h-text">
@@ -83,20 +86,24 @@
 
   async function copyContact (event, contactRef, text) {
     event.preventDefault()
-    const copyIcon = contactRef.getElementsByClassName('fa-copy')[0]
+    contactRef.style.pointerEvents = 'none'
+    contactRef.style.cursor = 'default'
+
+    const copyIcon = contactRef.getElementsByClassName('copy-icon')[0]
+    const copySuccessIcon = contactRef.getElementsByClassName('copy-success-icon')[0]
 
     const blob = new Blob([text], { type: 'text/plain' })
     const item = new window.ClipboardItem({ 'text/plain': blob })
 
     await navigator.clipboard.write([item])
 
-    copyIcon.classList.add('fa-check')
-    contactRef.style.pointerEvents = 'none'
-    contactRef.style.cursor = 'default'
+    copyIcon.style.display = 'none'
+    copySuccessIcon.style.display = 'inline'
 
     await new Promise(resolve => setTimeout(resolve, 500))
 
-    copyIcon.classList.remove('fa-check')
+    copyIcon.style.display = 'inline'
+    copySuccessIcon.style.display = 'none'
     contactRef.style.pointerEvents = 'all'
     contactRef.style.cursor = 'pointer'
   }
@@ -146,14 +153,6 @@
       openButton.addEventListener('click', (e) => showCard(e, card), false)
       closeButton.addEventListener('click', (e) => showCard(e, undefined), false)
     }
-
-    const headerCurtain = document.getElementById('name-header-curtain')
-    const headerName = document.getElementById('name-header-svg')
-    const contentElement = document.querySelector('div[class="content"]')
-
-    contentElement.addEventListener('scroll', (event) => {
-      headerCurtain.style.top = `${Math.min(event.target.scrollTop, headerName.clientHeight)}px`
-    })
   }
 
   window.onload = function () {

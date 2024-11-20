@@ -30,10 +30,12 @@ class CanvasHelper {
         this.playing = false
         document.getElementById('pause-icon').style.display = 'none'
         document.getElementById('play-icon').style.display = 'inline'
+        document.getElementById('randomize-button').disabled = false
       } else {
         this.playing = true
         document.getElementById('pause-icon').style.display = 'inline'
         document.getElementById('play-icon').style.display = 'none'
+        document.getElementById('randomize-button').disabled = true
         window.requestAnimationFrame(() => this.simulateStep())
       }
     }, false)
@@ -49,6 +51,10 @@ class CanvasHelper {
         document.getElementById('fast-icon').style.display = 'inline'
         document.getElementById('forw-icon').style.display = 'none'
       }
+    }, false)
+
+    document.getElementById('randomize-button').addEventListener('click', () => {
+      this.shuffle()
     }, false)
 
     window.addEventListener('resize', () => {
@@ -82,6 +88,15 @@ class CanvasHelper {
         this.redraw(e)
       }
     }, false)
+  }
+
+  static shuffle () {
+    for (let i = 0; i < this.gridSize; i++) {
+      for (let j = 0; j < this.gridSize; j++) {
+        this.grid[i][j] = Math.random() > 0.5
+      }
+    }
+    this.drawBoard(this.canvas, this.ctx)
   }
 
   static redraw (e) {

@@ -2,14 +2,14 @@
   --black:#121212;
   --dark: #212121;
   --blue: #003656;
-  --cyan: #0b7b9e;
+  --cyan: #19b7e8;
   --gray: #6f7174;
   --text: #c6c3b6;
   --white: #dddace;
 
-  --font-h: max(1.75vw, 12px);
-  --font-p: max(1vw, 12px);
-  --font-s: max(0.75vw, 11px);
+  --font-h: max(1.75vw, 24px);
+  --font-p: max(1vw, 14px);
+  --font-s: max(0.75vw, 12px);
 
   --projects: 7;
 }
@@ -19,7 +19,6 @@ html {
   font-weight: normal;
   color: var(--text);
   letter-spacing: 2px;
-  user-select: none;
 }
 
 body {
@@ -66,6 +65,14 @@ main {
   main {
     width: 100vw;
   }
+
+  canvas {
+    display: none;
+  }
+
+  .control-panel {
+    display: none;
+  }
 }
 
 hr {
@@ -103,8 +110,26 @@ a {
   font-size: var(--font-p);
 }
 
+.p-svg {
+  width: var(--font-p);
+  height: var(--font-p);
+  margin-right: calc(var(--font-p) / 4);
+}
+
+.copy-icon, .copy-success-icon {
+  width: var(--font-p);
+  height: var(--font-p);
+  margin-left: calc(var(--font-p) / 4);
+}
+
 .s-text {
+  font-weight: bold;
   font-size: var(--font-s);
+}
+
+.center-text {
+  display: flex;
+  align-items: center;
 }
 
 .navbar {
@@ -288,57 +313,29 @@ button.project-content-close {
   font-style: italic;
 }
 
-.name-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.name-header span {
-  display: flex;
-  height: 1.25vw;
-  background-color: var(--text);
-  width: 100%;
-}
-
-.name-header svg {
-  fill: var(--text);
-  stroke-width: 0;
-  width: 100%;
-  margin-top: 1vw;
-  margin-bottom: -0.25vw;
-}
-
-.name-header-curtain {
-  position: absolute;
-  border: 0 solid var(--text);
-  border-top-width: 1.5vw;
-  margin-top: -1.5vw;
-}
-
 .control-panel {
   position: fixed;
   top: 2vh;
-  left: 45vw;
-  width: 10vw;
-  height: 8vh;
   border-radius: 1vh;
   overflow: hidden;
   background-color: var(--text);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1vh;
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
 }
 
 .control-panel button {
   border: none;
   background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+  padding: 0;
+  margin: 0.25vw;
 }
 
-.control-panel button i {
-  display: inline;
+.control-panel svg {
+  width: 2vw;
+  height: 2vw;
 }
