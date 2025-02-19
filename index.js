@@ -3,6 +3,20 @@
 
   const projectsArray = [
     {
+      titleText: 'Keep It Together',
+      description: 'Keep It Together was a cooperative, survival space game made using Godot for the 2025 Spring game jam, hosted by ACM Game. You can download an executable to play the game at [this itch.io page](https://swishyswishtail.itch.io/keep-it-together).',
+      thumbSrc: 'assets/breakupgame-thumb-cropped.png',
+      thumbAlt: 'Thumbnail showcasing gameplay of the Keep It Together game',
+      devIcons: [['devicon-godot-plain', 'Godot']]
+    },
+    {
+      titleText: 'Pickhacks Hackathon Website',
+      description: '[Pickhacks](https://pickhacks.io) is Missouri S&T\'s annual hackathon hosted by the ACM Hack team each year. I helped develop the registration page frontend and managed deployment configuration.',
+      thumbSrc: 'assets/pickhacks-thumb-cropped.png',
+      thumbAlt: 'Hero page of the Pickhacks Website',
+      devIcons: [['devicon-typescript-plain', 'TypeScript'], ['devicon-nextjs-plain', 'NextJS'], ['devicon-vercel-original', 'Vercel']]
+    },
+    {
       titleText: 'Line Rider Web',
       description: '[Line Rider Web](https://www.linerider.com) is a revision of the 2006 flash game Line Rider built for the web. I contributed highly-requested features and bugfixes.',
       thumbSrc: 'assets/lrweb-thumb-cropped.png',
