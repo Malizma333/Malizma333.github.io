@@ -80,7 +80,7 @@ hr {
   width: 100%;
 }
 
-a {
+.hyperlink {
   color: var(--cyan);
   text-decoration: none;
   background-color: transparent;
@@ -89,14 +89,14 @@ a {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  a {
+  .hyperlink {
     -webkit-transition: background-color 0.2s;
     -moz-transition: background-color 0.2s;
     -o-transition: background-color 0.2s;
     transition: background-color 0.2s;
   }
 
-  a:hover {
+  .hyperlink:hover {
     background-color: var(--blue);
   }
 }
@@ -308,9 +308,10 @@ button.project-content-close {
 .footer {
   align-items: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex: 1;
   font-style: italic;
+  width: 12em;
 }
 
 .control-panel {

@@ -45,7 +45,7 @@
       devIcons: [['devicon-javascript-plain', 'JavaScript'], ['devicon-typescript-plain', 'TypeScript']]
     },
     {
-      titleText: 'Kakuro Solver Webapp',
+      titleText: 'Kakuro Solver',
       description: "Kakuro is a pen-and-paper game that's best described as a hybrid of crosswords and sudoku. I made a simple puzzle solver to practice recursive backtracking and try out the NextJS framework. [Here's the website](https://kakuro-solver.vercel.app) hosted by Vercel.",
       thumbSrc: 'assets/kakuro-thumb-cropped.png',
       thumbAlt: 'Partial screenshot of a solved kakuro board.',
