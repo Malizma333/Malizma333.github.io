@@ -11,7 +11,7 @@
   --font-p: max(1vw, 14px);
   --font-s: max(0.75vw, 12px);
 
-  --projects: 9;
+  --projects: 10;
 }
 
 html {
@@ -309,6 +309,7 @@ button.project-content-close {
   align-items: center;
   display: flex;
   justify-content: space-between;
+  gap: 8px;
   flex: 1;
   font-style: italic;
   width: 12em;

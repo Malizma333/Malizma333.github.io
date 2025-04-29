@@ -3,6 +3,13 @@
 
   const projectsArray = [
     {
+      titleText: 'ARtist',
+      description: '[ARtist](https://devpost.com/software/artist-qlgbw8) was my team\'s winning submission for the TigerVerse 2025 hackathon. We used web and VR technologies to allow users to position digital images in augmented reality for tracing in the real world.',
+      thumbSrc: 'assets/tigerverse-artist-thumb-cropped.png',
+      thumbAlt: 'Homepage of the ARtist website with doodles showcasing what can be drawn',
+      devIcons: [['devicon-unity-plain', 'Unity'], ['devicon-nextjs-plain', 'NextJS'], ['devicon-vercel-original', 'Vercel']]
+    },
+    {
       titleText: 'Keep It Together',
       description: 'Keep It Together was a cooperative, survival space game made using Godot for the 2025 Spring game jam, hosted by ACM Game. You can download an executable to play the game at [this itch.io page](https://swishyswishtail.itch.io/keep-it-together).',
       thumbSrc: 'assets/breakupgame-thumb-cropped.png',
